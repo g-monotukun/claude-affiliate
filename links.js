@@ -24,6 +24,8 @@ const AFF_LINKS = {
 <img border="0" width="728" height="90" alt="" src="https://www20.a8.net/svt/bgt?aid=261016892352&wid=001&eno=01&mid=s00000021185002038000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BEHX8+5TKLPU+4JGQ+C4TB5" alt="">`, // マネーフォワード クラウド確定申告（A8.net）
   moneyforward_text: ``,
+  mf_business: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEHX8+64AELU+3SPO+C8MP3M" rel="nofollow">個人事業主にとって必要な機能が搭載！【マネーフォワード クラウド】</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4BEHX8+64AELU+3SPO+C8MP3M" alt="">`, // マネーフォワード クラウド 個人事業主向け（A8.net・テキスト）
 };
 
 document.querySelectorAll("[data-aff]").forEach((el) => {

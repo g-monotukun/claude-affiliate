@@ -170,6 +170,8 @@ img{max-width:100%;height:auto}
 .product-actions .btn{width:100%}
 .aff-btn a{display:flex;justify-content:center;background:var(--cta);color:#fff;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:999px;box-shadow:0 6px 16px rgba(232,97,60,.3)}
 .aff-btn img{display:none}
+.aff-block{margin:16px 0 8px}
+.aff-block a{text-align:center;line-height:1.6}
 
 /* CTA band */
 .cta-band{margin-top:56px;background:linear-gradient(120deg,var(--accent),#2f7fd1);color:#fff;border-radius:22px;padding:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
