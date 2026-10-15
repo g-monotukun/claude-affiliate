@@ -46,15 +46,6 @@ img{max-width:100%;height:auto}
 .lead{color:var(--muted);font-size:1.02rem;margin:0 0 24px}
 .cats{display:flex;flex-wrap:wrap;gap:8px}
 .cat{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:700}
-.hero-art{position:relative;height:300px}
-.orb{position:absolute;inset:40px 40px;border-radius:50%;background:conic-gradient(from 200deg,var(--teal-soft),var(--sky-soft),var(--violet-soft),var(--amber-soft),var(--teal-soft));filter:blur(2px)}
-.bubble{position:absolute;z-index:1;display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--surface);border-radius:20px;padding:14px 18px;box-shadow:var(--shadow);font-size:.8rem;font-weight:700;animation:float 6s ease-in-out infinite}
-.b1{top:6%;left:12%;color:var(--violet)}
-.b2{top:14%;right:8%;color:var(--amber);animation-delay:-1.5s}
-.b3{bottom:10%;left:4%;color:var(--sky);animation-delay:-3s}
-.b4{bottom:4%;right:18%;color:var(--teal);animation-delay:-4.5s}
-@keyframes float{50%{transform:translateY(-10px)}}
-@media (prefers-reduced-motion:reduce){.bubble{animation:none}}
 
 .points{border-bottom:1px solid var(--line);background:var(--surface)}
 .points-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:20px;padding-bottom:20px}
@@ -119,8 +110,51 @@ img{max-width:100%;height:auto}
 .note{font-size:.85rem;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:10px 14px}
 
 /* Affiliate box */
-.aff{position:relative;background:var(--surface);border:2px solid var(--amber-soft);border-radius:var(--radius);padding:28px 16px 18px;margin:28px 0;text-align:center;box-shadow:var(--shadow)}
-.aff::before{content:"PR ・ おすすめ";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:.72rem;font-weight:700;padding:2px 12px;border-radius:999px;white-space:nowrap}
+.aff{text-align:center;margin:16px 0 8px}
+.aff a{display:inline-block;border-radius:10px;overflow:hidden;transition:transform .2s}
+.aff a:hover{transform:scale(1.02)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--cta);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:999px;box-shadow:0 6px 16px rgba(232,97,60,.3);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(232,97,60,.38)}
+.btn.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.light{background:#fff;color:var(--accent);box-shadow:none}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+
+/* Goal panel */
+.goal-panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);display:grid;gap:10px;scroll-margin-top:90px}
+.goal-title{display:flex;align-items:center;gap:6px;font:800 1.05rem "M PLUS Rounded 1c",sans-serif;margin:0 0 4px;color:var(--accent)}
+.goal{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:14px;background:var(--cs);color:var(--ink);text-decoration:none;transition:transform .2s}
+.goal:hover{transform:translateX(4px)}
+.goal-icon{width:46px;height:46px;border-radius:12px;background:var(--surface);color:var(--c);display:grid;place-items:center;flex:none}
+.goal-text{display:flex;flex-direction:column;line-height:1.5}
+.goal-text strong{font-size:.98rem}
+.goal-text small{color:var(--c);font-weight:700;font-size:.8rem}
+
+/* Product boxes */
+.section-lead{color:var(--muted);margin:-8px 0 20px}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.product{position:relative;background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.prose .product{margin:28px 0}
+.product-pr{position:absolute;top:12px;right:12px;font-size:.68rem;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 6px}
+.product-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.product-icon{width:52px;height:52px;border-radius:14px;background:var(--cs);color:var(--c);display:grid;place-items:center;flex:none}
+.product-badge{display:inline-block;background:var(--cs);color:var(--c);font-size:.72rem;font-weight:700;padding:1px 8px;border-radius:999px}
+.product-name{font:800 1.2rem/1.4 "M PLUS Rounded 1c",sans-serif;margin:2px 0 0}
+.product-tagline{font-weight:700;font-size:.92rem;line-height:1.7;margin:0 0 10px}
+.product-points{list-style:none;padding:0;margin:0 0 12px;font-size:.87rem;flex:1}
+.product-points li{display:flex;gap:6px;align-items:flex-start;line-height:1.7;padding:2px 0}
+.product-points .ico{color:var(--c);margin-top:4px}
+.prose .product-points{padding:0}
+.product-actions{display:flex;flex-direction:column;gap:8px}
+.product-actions .btn{width:100%}
+.aff-btn a{display:flex;justify-content:center;background:var(--cta);color:#fff;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:999px;box-shadow:0 6px 16px rgba(232,97,60,.3)}
+.aff-btn img{display:none}
+
+/* CTA band */
+.cta-band{margin-top:56px;background:linear-gradient(120deg,var(--accent),#2f7fd1);color:#fff;border-radius:22px;padding:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.cta-band p{margin:0;opacity:.9}
+.cta-title{font:800 1.3rem "M PLUS Rounded 1c",sans-serif;opacity:1!important;margin-bottom:4px!important}
 
 /* Author & related */
 .author{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-top:48px}
@@ -138,8 +172,7 @@ img{max-width:100%;height:auto}
 
 @media (max-width:760px){
   .hero-inner{grid-template-columns:1fr;padding-top:36px;padding-bottom:36px}
-  .hero-art{height:200px}
-  .pc{display:none}
+  .pc,.hero-cta{display:none}
   .points-grid{grid-template-columns:1fr;gap:12px}
   .brand-text small{display:none}
   .gnav a{padding:6px 8px;font-size:.8rem}

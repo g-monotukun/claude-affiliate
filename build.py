@@ -18,6 +18,7 @@ src/articles/ の原稿は記事、src/ 直下の原稿は固定ページにな�
 広告リンクは <div class="aff" data-aff="キー"></div> と書き、links.js に登録する。
 """
 import datetime
+import hashlib
 import html
 import pathlib
 import re
@@ -37,6 +38,57 @@ ICONS = {
     "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     "pen": '<path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/>',
 }
+
+
+def version(name):
+    """ファイル内容のハッシュ。URLに付けて、更新時にブラウザのキャッシュを無効にする。"""
+    return hashlib.md5((ROOT / name).read_bytes()).hexdigest()[:8]
+
+
+# 広告キーごとの商品紹介。記事中の <div class="aff" data-aff="キー"></div> が商品ボックスになる。
+# テキストリンクは links.js の「キー_text」に登録するとボタンとして表示される。
+PRODUCTS = {
+    "xserver": dict(
+        name="エックスサーバー", color="sky", icon="server", badge="定番レンタルサーバー",
+        tagline="長く使われている国内の定番。困ったときに情報が見つけやすい",
+        points=["申込みと同時にWordPressを設定できる機能がある", "利用者が多く、設定方法の解説記事が豊富", "ブログから法人サイトまで幅広く使われている"],
+        article="rental-server-choice"),
+    "conoha_wing": dict(
+        name="ConoHa WING", color="teal", icon="server", badge="サーバー＋ドメインを一括",
+        tagline="サーバーとドメインをまとめて申し込めるWINGパックが特徴",
+        points=["WINGパックでサーバーとドメインの手続きを一度に", "管理画面が分かりやすいと評判", "WordPressブログを始めたい初心者に人気"],
+        article="rental-server-choice"),
+    "onamae": dict(
+        name="お名前.com", color="violet", icon="globe", badge="独自ドメイン",
+        tagline="国内で広く使われているドメイン登録サービス",
+        points=[".com や .net など定番のドメインを取得できる", "時期によってキャンペーン価格で取得できる", "GitHub Pagesのサイトにも独自ドメインを設定できる"],
+        article="need-own-domain"),
+    "dmm_ai_camp": dict(
+        name="DMM 生成AI CAMP", color="coral", icon="school", badge="生成AIスクール",
+        tagline="職種別のコースで、仕事に生かせる生成AIスキルを学べる",
+        points=["営業・マーケティングなど職種別にコースを用意", "受講前に無料カウンセリングで相談できる", "条件を満たすと補助金の対象になるコースもある"],
+        article="ai-school-checklist"),
+}
+
+
+def product_box(key, p, with_banner=True):
+    pr = PRODUCTS[key]
+    pts = "".join(f"<li>{icon('check', 16)}<span>{s}</span></li>" for s in pr["points"])
+    banner = f'<div class="aff" data-aff="{key}"></div>' if with_banner else ""
+    more = "" if with_banner else f'<a class="btn ghost" href="{p}articles/{pr["article"]}.html">解説記事を読む</a>'
+    return f"""<div class="product c-{pr['color']}">
+<span class="product-pr">PR</span>
+<div class="product-head"><span class="product-icon">{icon(pr['icon'], 28)}</span>
+<div><span class="product-badge">{pr['badge']}</span><p class="product-name">{pr['name']}</p></div></div>
+<p class="product-tagline">{pr['tagline']}</p>
+<ul class="product-points">{pts}</ul>
+{banner}<div class="product-actions"><span class="aff-btn" data-aff="{key}_text"></span>{more}</div>
+</div>"""
+
+
+def products_in(body, p):
+    return re.sub(r'<div class="aff" data-aff="([a-z_]+)"></div>',
+                  lambda m: product_box(m.group(1), p) if m.group(1) in PRODUCTS else m.group(0), body)
 
 
 def icon(name, size=24):
@@ -100,7 +152,7 @@ def layout(title, description, body, p, is_home=False):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{p}style.css">
+<link rel="stylesheet" href="{p}style.css?v={version('style.css')}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f766e'/%3E%3Ctext x='16' y='21' font-size='13' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EAI%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -115,7 +167,7 @@ def layout(title, description, body, p, is_home=False):
 <nav class="footer-nav"><a href="{p}index.html">トップ</a><a href="{p}about.html">運営者情報</a><a href="{p}privacy.html">プライバシーポリシー</a></nav>
 <p class="copy">&copy; 2026 {SITE}</p>
 </div></footer>
-<script src="{p}links.js"></script>
+<script src="{p}links.js?v={version('links.js')}"></script>
 </body>
 </html>
 """
@@ -131,7 +183,7 @@ def card(a, p):
 
 def build_article(a, articles):
     p = "../"
-    body, toc = add_toc(wrap_tables(a["body"]))
+    body, toc = add_toc(products_in(wrap_tables(a["body"]), p))
     summary = "".join(f"<li>{icon('check', 18)}<span>{s}</span></li>" for s in a["summary"].split("|"))
     related = [r for r in articles if r["slug"] != a["slug"]]
     related.sort(key=lambda r: (r["category"] != a["category"], -int(r["order"])))
@@ -159,26 +211,32 @@ def build_article(a, articles):
     return layout(a["title"], a["description"], content, p)
 
 
+GOALS = [
+    ("ブログを始めたい", "サーバーの選び方", "rental-server-choice", "server", "teal"),
+    ("AIを仕事で使えるようになりたい", "スクールの選び方", "ai-school-checklist", "school", "coral"),
+    ("自分に合うAIツールを知りたい", "ツールの選び方", "how-to-choose-ai-tools", "sparkle", "amber"),
+    ("独自ドメインがほしい", "ドメインの基礎", "need-own-domain", "globe", "violet"),
+]
+
+
 def build_home(articles):
     p = ""
-    cats = {}
-    for a in articles:
-        cats.setdefault(a["category"], a)
-    chips = "".join(f'<span class="cat c-{a["color"]}">{icon(a["icon"], 18)}{name}</span>' for name, a in cats.items())
+    goals = "".join(
+        f'<a class="goal c-{c}" href="articles/{slug}.html"><span class="goal-icon">{icon(ic, 26)}</span>'
+        f'<span class="goal-text"><strong>{q}</strong><small>{sub} →</small></span></a>'
+        for q, sub, slug, ic, c in GOALS)
+    products = "".join(product_box(k, p, with_banner=False) for k in PRODUCTS)
     cards = "".join(card(a, p) for a in articles)
     content = f"""<section class="hero"><div class="wrap hero-inner">
 <div class="hero-text">
 <p class="eyebrow">{icon('sparkle', 16)} AI時代の道具選びガイド</p>
 <h1>AIツールを、<br><span class="hl">目的から</span>選ぶ。</h1>
-<p class="lead">文章作成、画像生成、議事録、ブログ運営まで。<br class="pc">増えすぎたAIツールの中から、あなたの目的に合うものを見つけるための比較と選び方をまとめています。</p>
-<div class="cats">{chips}</div>
+<p class="lead">文章作成、画像生成、ブログ運営、AIの学び方まで。<br class="pc">増えすぎたツールの中から、あなたに合うものが見つかるように、選び方と確認ポイントをまとめています。</p>
+<div class="hero-cta"><a class="btn" href="#goals">目的から探す</a><a class="btn ghost" href="#picks">おすすめサービスを見る</a></div>
 </div>
-<div class="hero-art" aria-hidden="true">
-<div class="bubble b1">{icon('pen', 30)}<span>文章</span></div>
-<div class="bubble b2">{icon('sparkle', 30)}<span>画像</span></div>
-<div class="bubble b3">{icon('code', 30)}<span>開発</span></div>
-<div class="bubble b4">{icon('school', 30)}<span>学習</span></div>
-<div class="orb"></div>
+<div class="goal-panel" id="goals">
+<p class="goal-title">{icon('sparkle', 18)} あなたの目的は？</p>
+{goals}
 </div>
 </div></section>
 <section class="points"><div class="wrap points-grid">
@@ -186,10 +244,19 @@ def build_home(articles):
 <div class="point">{icon('check', 22)}<div><strong>確認ポイントを明記</strong><p>契約前に見るべき条件をまとめています</p></div></div>
 <div class="point">{icon('check', 22)}<div><strong>実践の記録</strong><p>このサイト自体もAIで作っています</p></div></div>
 </div></section>
+<section class="wrap" id="picks">
+<h2 class="section-title">編集部おすすめのサービス</h2>
+<p class="section-lead">このサイトの運営や記事づくりの中で調べた、目的別のおすすめです。</p>
+<div class="products">{products}</div>
+</section>
 <main class="wrap" id="articles">
 <h2 class="section-title">新着記事</h2>
 <div class="grid">{cards}</div>
 </main>
+<section class="wrap"><div class="cta-band">
+<div><p class="cta-title">まずは「何をしたいか」から。</p><p>目的が決まれば、選ぶべきツールは自然に絞れます。</p></div>
+<a class="btn light" href="#goals">目的から探す</a>
+</div></section>
 """
     return layout(SITE, SITE_DESC, content, p, is_home=True)
 
