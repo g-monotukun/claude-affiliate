@@ -16,6 +16,10 @@ const AFF_LINKS = {
   onamae: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEH59+40OCS2+50+2HV61T" rel="nofollow">
 <img border="0" width="728" height="90" alt="" src="https://www26.a8.net/svt/bgt?aid=261015885243&wid=001&eno=01&mid=s00000000018015094000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4BEH59+40OCS2+50+2HV61T" alt="">`,      // お名前.com（A8.net）
+  freee: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEHX8+5SZ642+3SPO+9FFFOX" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=261016892351&wid=001&eno=01&mid=s00000017718057011000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEHX8+5SZ642+3SPO+9FFFOX" alt="">`, // freee会計（A8.net）
+  freee_text: ``,
 };
 
 document.querySelectorAll("[data-aff]").forEach((el) => {

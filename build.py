@@ -39,6 +39,7 @@ ICONS = {
     "globe": '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.3 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.3-3.5-8.5s1.1-6.1 3.5-8.5Z"/>',
     "sparkle": '<path d="M12 3.5 13.8 9 19.5 11l-5.7 2-1.8 5.5-1.8-5.5L4.5 11l5.7-2L12 3.5Z"/><path d="M18.5 3.5v3M17 5h3"/>',
     "code": '<path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4M13.5 5.5l-3 13"/>',
+    "receipt": '<path d="M6 3.5h12v17l-2.5-1.5-2 1.5-1.5-1.5-1.5 1.5-2-1.5L6 20.5v-17Z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/>',
     "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     "pen": '<path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/>',
 }
@@ -52,6 +53,11 @@ def version(name):
 # 広告キーごとの商品紹介。記事中の <div class="aff" data-aff="キー"></div> が商品ボックスになる。
 # テキストリンクは links.js の「キー_text」に登録するとボタンとして表示される。
 PRODUCTS = {
+    "freee": dict(
+        name="freee会計", color="amber", icon="receipt", badge="クラウド会計ソフト",
+        tagline="日々の記帳から確定申告の書類作成まで、クラウドでまとめて進められる",
+        points=["銀行口座やクレジットカードと連携して取引を取り込める", "質問に答えながら確定申告の書類を作成できる", "パソコンでもスマートフォンでも使える"],
+        article="side-job-tax-return"),
     "xserver": dict(
         name="エックスサーバー", color="sky", icon="server", badge="定番レンタルサーバー",
         tagline="長く使われている国内の定番。困ったときに情報が見つけやすい",
@@ -255,6 +261,7 @@ def build_article(a, articles):
 
 GOALS = [
     ("ブログを始めたい", "サーバーの選び方", "rental-server-choice", "server", "teal"),
+    ("副業の確定申告が不安", "確定申告の基本", "side-job-tax-return", "receipt", "amber"),
     ("AIを仕事で使えるようになりたい", "スクールの選び方", "ai-school-checklist", "school", "coral"),
     ("自分に合うAIツールを知りたい", "ツールの選び方", "how-to-choose-ai-tools", "sparkle", "amber"),
     ("独自ドメインがほしい", "ドメインの基礎", "need-own-domain", "globe", "violet"),
