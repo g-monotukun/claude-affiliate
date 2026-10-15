@@ -20,6 +20,7 @@ src/articles/ の原稿は記事、src/ 直下の原稿は固定ページにな�
 import datetime
 import hashlib
 import html
+import json
 import pathlib
 import re
 
@@ -27,6 +28,7 @@ ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "src"
 SITE = "AIツール比較ラボ"
 TAGLINE = "AIツールを、目的から選ぶ。"
+BASE_URL = "https://g-monotukun.github.io/claude-affiliate/"
 SITE_DESC = "AIツール・業務効率化ツールを目的別に比較し、選び方と使い方をやさしく解説するサイトです。"
 
 ICONS = {
@@ -76,7 +78,7 @@ def product_box(key, p, with_banner=True):
     pts = "".join(f"<li>{icon('check', 16)}<span>{s}</span></li>" for s in pr["points"])
     banner = f'<div class="aff" data-aff="{key}"></div>' if with_banner else ""
     more = "" if with_banner else f'<a class="btn ghost" href="{p}articles/{pr["article"]}.html">解説記事を読む</a>'
-    return f"""<div class="product c-{pr['color']}">
+    return f"""<div class="product c-{pr['color']}" id="p-{key}">
 <span class="product-pr">PR</span>
 <div class="product-head"><span class="product-icon">{icon(pr['icon'], 28)}</span>
 <div><span class="product-badge">{pr['badge']}</span><p class="product-name">{pr['name']}</p></div></div>
@@ -137,7 +139,7 @@ def reading_minutes(body):
     return max(1, round(chars / 500))
 
 
-def layout(title, description, body, p, is_home=False):
+def layout(title, description, body, p, is_home=False, path="", head=""):
     full_title = SITE if is_home else f"{title} | {SITE}"
     return f"""<!doctype html>
 <html lang="ja">
@@ -149,6 +151,8 @@ def layout(title, description, body, p, is_home=False):
 <meta property="og:title" content="{html.escape(full_title)}">
 <meta property="og:description" content="{html.escape(description)}">
 <meta property="og:type" content="{'website' if is_home else 'article'}">
+<meta property="og:url" content="{BASE_URL}{path}">
+<link rel="canonical" href="{BASE_URL}{path}">{head}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -181,9 +185,43 @@ def card(a, p):
 </a>"""
 
 
+def quick_compare(body):
+    """記事に登場する商品の早見表。各行から商品ボックスへ移動できる。"""
+    keys = [k for k in dict.fromkeys(re.findall(r'data-aff="([a-z_]+)"', body)) if k in PRODUCTS]
+    if len(keys) < 2:
+        return ""
+    rows = "".join(
+        f'<tr><th><span class="qc-name c-{PRODUCTS[k]["color"]}">{PRODUCTS[k]["name"]}</span></th>'
+        f'<td>{PRODUCTS[k]["tagline"]}</td><td><a class="qc-go" href="#p-{k}">詳しく見る ↓</a></td></tr>'
+        for k in keys)
+    return (f'<div class="quick"><p class="quick-title">{icon("sparkle", 18)} この記事で紹介するサービス</p>'
+            f'<div class="table-wrap"><table><tr><th>サービス</th><th>特徴</th><th></th></tr>{rows}</table></div></div>')
+
+
+def faq_parts(a):
+    if not a.get("faq"):
+        return "", ""
+    qa = [item.split("::", 1) for item in a["faq"].split("||")]
+    items = "".join(f'<details class="faq-item"><summary>{q}</summary><p>{ans}</p></details>' for q, ans in qa)
+    data = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": ans}} for q, ans in qa]}
+    return (f'<h2>よくある質問</h2><div class="faq">{items}</div>',
+            f'\n<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')
+
+
 def build_article(a, articles):
     p = "../"
-    body, toc = add_toc(products_in(wrap_tables(a["body"]), p))
+    faq_html, faq_ld = faq_parts(a)
+    body, toc = add_toc(products_in(wrap_tables(a["body"] + faq_html), p))
+    updated = a.get("updated", a["date"])
+    dates = f'<span>公開 {jdate(a["date"])}</span>' + (f'<span>更新 {jdate(updated)}</span>' if updated != a["date"] else "")
+    conclusion = (f'<div class="conclusion"><p class="conclusion-title">結論</p><p>{a["conclusion"]}</p></div>'
+                  if a.get("conclusion") else "")
+    article_ld = {"@context": "https://schema.org", "@type": "Article", "headline": a["title"],
+                  "description": a["description"], "datePublished": a["date"], "dateModified": updated,
+                  "author": {"@type": "Organization", "name": f"{SITE} 編集部", "url": BASE_URL + "about.html"},
+                  "mainEntityOfPage": f"{BASE_URL}articles/{a['slug']}.html"}
+    head = f'\n<script type="application/ld+json">{json.dumps(article_ld, ensure_ascii=False)}</script>{faq_ld}'
     summary = "".join(f"<li>{icon('check', 18)}<span>{s}</span></li>" for s in a["summary"].split("|"))
     related = [r for r in articles if r["slug"] != a["slug"]]
     related.sort(key=lambda r: (r["category"] != a["category"], -int(r["order"])))
@@ -192,10 +230,12 @@ def build_article(a, articles):
 <nav class="crumbs"><a href="{p}index.html">ホーム</a><span>›</span><span>{a['category']}</span></nav>
 <div class="hero-icon">{icon(a['icon'], 36)}</div>
 <h1>{a['title']}</h1>
-<p class="article-meta"><span class="chip">{a['category']}</span><span>{jdate(a['date'])}</span><span>約{reading_minutes(a['body'])}分で読めます</span></p>
+<p class="article-meta"><span class="chip">{a['category']}</span>{dates}<span>約{reading_minutes(a['body'])}分で読めます</span></p>
 </div></div>
 <main class="wrap narrow article">
+{conclusion}
 <div class="summary"><p class="summary-title">この記事でわかること</p><ul>{summary}</ul></div>
+{quick_compare(a["body"])}
 {toc}
 <div class="prose">
 {body}
@@ -208,7 +248,7 @@ def build_article(a, articles):
 </main>
 <section class="related"><div class="wrap"><h2 class="section-title">あわせて読みたい</h2><div class="grid">{rel_html}</div></div></section>
 """
-    return layout(a["title"], a["description"], content, p)
+    return layout(a["title"], a["description"], content, p, path=f"articles/{a['slug']}.html", head=head)
 
 
 GOALS = [
@@ -267,7 +307,7 @@ def build_page(meta):
 {wrap_tables(meta['body'])}
 </div></main>
 """
-    return layout(meta["title"], meta["description"], content, "")
+    return layout(meta["title"], meta["description"], content, "", path=meta["slug"] + ".html")
 
 
 def write(rel, text):
@@ -287,9 +327,21 @@ def main():
 
     for a in articles:
         write(f"articles/{a['slug']}.html", build_article(a, articles))
+    pages = []
     for path in SRC.glob("*.html"):
-        write(path.name, build_page(parse(path)))
+        meta = parse(path)
+        meta["slug"] = path.stem
+        pages.append(path.stem + ".html")
+        write(path.name, build_page(meta))
     write("index.html", build_home(articles))
+
+    urls = [("", max(a.get("updated", a["date"]) for a in articles))]
+    urls += [(f"articles/{a['slug']}.html", a.get("updated", a["date"])) for a in articles]
+    urls += [(pg, None) for pg in sorted(pages)]
+    entries = "".join(f"<url><loc>{BASE_URL}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>\n"
+                      for u, d in urls)
+    write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n'
+                         f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{entries}</urlset>\n')
 
 
 if __name__ == "__main__":

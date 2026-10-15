@@ -8,10 +8,14 @@
 <meta property="og:title" content="Claude Codeだけでこのサイトを作った手順 | AIツール比較ラボ">
 <meta property="og:description" content="AIコーディングツールClaude Codeに日本語で指示を出して、このサイトを作った手順を記録します。">
 <meta property="og:type" content="article">
+<meta property="og:url" content="https://g-monotukun.github.io/claude-affiliate/articles/build-site-with-claude-code.html">
+<link rel="canonical" href="https://g-monotukun.github.io/claude-affiliate/articles/build-site-with-claude-code.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Claude Codeだけでこのサイトを作った手順", "description": "AIコーディングツールClaude Codeに日本語で指示を出して、このサイトを作った手順を記録します。", "datePublished": "2026-10-15", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "AIツール比較ラボ 編集部", "url": "https://g-monotukun.github.io/claude-affiliate/about.html"}, "mainEntityOfPage": "https://g-monotukun.github.io/claude-affiliate/articles/build-site-with-claude-code.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "プログラミングの知識は必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "なくても始められます。ただ、出来上がったものを確認して、直してほしい点を言葉で伝えることは必要です。"}}, {"@type": "Question", "name": "サイトの公開にお金はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "GitHub Pagesを使えば無料で公開できます。独自ドメインを使う場合はドメイン代がかかります。"}}, {"@type": "Question", "name": "AIが書いた記事をそのまま公開してもいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "公開前に内容が正しいか、広告表記があるかを人が確認するのがおすすめです。"}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=2c666376">
+<link rel="stylesheet" href="../style.css?v=73e2017f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f766e'/%3E%3Ctext x='16' y='21' font-size='13' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EAI%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -24,11 +28,13 @@
 <nav class="crumbs"><a href="../index.html">ホーム</a><span>›</span><span>実践記録</span></nav>
 <div class="hero-icon"><svg class="ico" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4M13.5 5.5l-3 13"/></svg></div>
 <h1>Claude Codeだけでこのサイトを作った手順</h1>
-<p class="article-meta"><span class="chip">実践記録</span><span>2026年10月15日</span><span>約1分で読めます</span></p>
+<p class="article-meta"><span class="chip">実践記録</span><span>公開 2026年10月15日</span><span>約1分で読めます</span></p>
 </div></div>
 <main class="wrap narrow article">
+<div class="conclusion"><p class="conclusion-title">結論</p><p>プログラミングの知識がなくても、Claude Codeに日本語で頼めばサイトの作成から公開まで進められます。ただしASP登録や公開前のチェックなど、人がやるべき作業も残ります。</p></div>
 <div class="summary"><p class="summary-title">この記事でわかること</p><ul><li><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Claude Codeに方向性をリサーチさせる方法</span></li><li><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>GitHub Pagesで無料公開する流れ</span></li><li><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>人がやる必要があった作業</span></li></ul></div>
-<nav class="toc" aria-label="目次"><p class="toc-title">目次</p><ol><li><a href="#s1">1. 方向性をリサーチさせる</a></li><li><a href="#s2">2. GitHubのリポジトリを用意する</a></li><li><a href="#s3">3. サイトを作らせる</a></li><li><a href="#s4">4. GitHub Pagesで公開する</a></li><li><a href="#s5">人がやる必要があったこと</a></li></ol></nav>
+
+<nav class="toc" aria-label="目次"><p class="toc-title">目次</p><ol><li><a href="#s1">1. 方向性をリサーチさせる</a></li><li><a href="#s2">2. GitHubのリポジトリを用意する</a></li><li><a href="#s3">3. サイトを作らせる</a></li><li><a href="#s4">4. GitHub Pagesで公開する</a></li><li><a href="#s5">人がやる必要があったこと</a></li><li><a href="#s6">よくある質問</a></li></ol></nav>
 <div class="prose">
 <p>このサイトは、AIコーディングツール「Claude Code」に日本語で指示を出して作りました。実際の流れを記録します。</p>
 <h2 id="s1">1. 方向性をリサーチさせる</h2>
@@ -46,7 +52,7 @@
 <li>GitHub Pagesの有効化</li>
 <li>公開前の内容チェック</li>
 </ul>
-<p>今後も、運営の過程をこのサイトで記録していきます。</p>
+<p>今後も、運営の過程をこのサイトで記録していきます。</p><h2 id="s6">よくある質問</h2><div class="faq"><details class="faq-item"><summary>プログラミングの知識は必要ですか？</summary><p>なくても始められます。ただ、出来上がったものを確認して、直してほしい点を言葉で伝えることは必要です。</p></details><details class="faq-item"><summary>サイトの公開にお金はかかりますか？</summary><p>GitHub Pagesを使えば無料で公開できます。独自ドメインを使う場合はドメイン代がかかります。</p></details><details class="faq-item"><summary>AIが書いた記事をそのまま公開してもいいですか？</summary><p>公開前に内容が正しいか、広告表記があるかを人が確認するのがおすすめです。</p></details></div>
 </div>
 <aside class="author">
 <span class="logo big">AI</span>

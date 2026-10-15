@@ -30,3 +30,14 @@ https://g-monotukun.github.io/claude-affiliate/
 - GitHub Pages の有効化（Settings → Pages → Branch: main / root）
 - ASP登録・本人確認・口座登録
 - 公開前の内容チェック
+
+## Threads 自動投稿
+- 投稿の予定は `threads/queue.json`。上から順に、未投稿（`posted_at` がない）ものを1日1件投稿する
+- `link` に記事のパスを書くと、リンクカード付きで投稿される（500文字以内）
+- 実行は GitHub Actions（`.github/workflows/threads.yml`、毎日21:17）。Actions タブから手動実行も可能
+- Secrets `THREADS_ACCESS_TOKEN`（必須）と `THREADS_USER_ID`（任意）が未設定の間は、投稿せず内容を表示するだけ
+- アクセストークンの有効期限は60日。期限前に作り直して Secrets を更新する
+- A8.net の広告リンクを Threads に直接貼るのは、案件の「SNS掲載可」を確認してから。貼る場合は本文に「#PR」を入れる
+
+## Search Console
+`sitemap.xml` を Google Search Console に登録する（URL プレフィックス: https://g-monotukun.github.io/claude-affiliate/）
