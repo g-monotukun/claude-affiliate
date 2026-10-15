@@ -8,7 +8,9 @@ const AFF_LINKS = {
   conoha_wing: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEH59+8G8IWI+50+5SMXIP" rel="nofollow">
 <img border="0" width="336" height="280" alt="" src="https://www21.a8.net/svt/bgt?aid=261015885511&wid=001&eno=01&mid=s00000000018035043000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4BEH59+8G8IWI+50+5SMXIP" alt="">`, // ConoHa WING（A8.net）
-  onamae: ``,      // お名前.com（A8.net）
+  onamae: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEH59+40OCS2+50+2HV61T" rel="nofollow">
+<img border="0" width="728" height="90" alt="" src="https://www26.a8.net/svt/bgt?aid=261015885243&wid=001&eno=01&mid=s00000000018015094000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4BEH59+40OCS2+50+2HV61T" alt="">`,      // お名前.com（A8.net）
 };
 
 document.querySelectorAll(".aff[data-aff]").forEach((el) => {
