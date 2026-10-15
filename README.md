@@ -22,7 +22,9 @@ https://g-monotukun.github.io/claude-affiliate/
 4. 空のキーの広告枠は記事上に表示されない
 
 ## ページの更新方法
-本文は `src/` に置き、`python3 build.py` で各ページを生成する（直接 `*.html` を編集しない）。
+- 記事の原稿は `src/articles/`、固定ページは `src/` に置き、`python3 build.py` で全ページを生成する（直接 `*.html` を編集しない）
+- 原稿の先頭にメタ情報（タイトル・カテゴリ・アイコン・色・要約など）を書く。書き方は `build.py` 冒頭のコメント参照
+- トップページの記事一覧・目次・関連記事は自動で作られる
 
 ## 人がやること
 - GitHub Pages の有効化（Settings → Pages → Branch: main / root）
