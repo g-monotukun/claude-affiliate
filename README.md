@@ -33,7 +33,9 @@ https://g-monotukun.github.io/claude-affiliate/
 
 ## Threads 自動投稿
 - 投稿の予定は `threads/queue.json`。上から順に、未投稿（`posted_at` がない）ものを1日1件投稿する
-- `link` に記事のパスを書くと、リンクカード付きで投稿される（500文字以内）
+- Threads アカウントは全サイト共通。投稿はすべてこの `threads/queue.json` で管理する
+- `link` に該当サイトの記事URL（https:// から始まる完全なURL）を書くと、リンクカード付きで投稿される（500文字以内）
+- `site` はどのサイトの投稿かのメモ
 - 実行は GitHub Actions（`.github/workflows/threads.yml`、毎日21:17）。Actions タブから手動実行も可能
 - Secrets `THREADS_ACCESS_TOKEN`（必須）と `THREADS_USER_ID`（任意）が未設定の間は、投稿せず内容を表示するだけ
 - アクセストークンの有効期限は60日。期限前に作り直して Secrets を更新する

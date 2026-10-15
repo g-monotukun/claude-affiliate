@@ -1,5 +1,7 @@
 """threads/queue.json の未投稿の先頭1件を Threads に投稿する。
 
+Threads アカウントは全サイト共通。link には投稿内容に対応するサイトの記事URLを完全な形で書く。
+
 必要な環境変数（GitHub の Secrets に登録）:
   THREADS_ACCESS_TOKEN  threads_content_publish 権限付きの長期アクセストークン
   THREADS_USER_ID       Threads のユーザーID（省略時は "me"）
@@ -15,7 +17,6 @@ import urllib.request
 
 API = "https://graph.threads.net/v1.0"
 QUEUE = pathlib.Path(__file__).resolve().parent.parent / "threads" / "queue.json"
-SITE = "https://g-monotukun.github.io/claude-affiliate/"
 
 
 def call(path, params):
@@ -35,7 +36,9 @@ def main():
         sys.exit(f"500文字を超えています（{len(text)}文字）: {text[:30]}…")
     params = {"media_type": "TEXT", "text": text}
     if post.get("link"):
-        params["link_attachment"] = SITE + post["link"]
+        if not post["link"].startswith("https://"):
+            sys.exit(f"link は https:// から始まる完全なURLで書いてください: {post['link']}")
+        params["link_attachment"] = post["link"]
 
     if os.environ.get("DRY_RUN") == "1" or not os.environ.get("THREADS_ACCESS_TOKEN"):
         print("[DRY RUN] 次の内容を投稿します:")
