@@ -111,7 +111,7 @@ img{max-width:100%;height:auto}
 
 /* Affiliate box */
 .aff{text-align:center;margin:16px 0 8px}
-.aff a{display:inline-block;border-radius:10px;overflow:hidden;transition:transform .2s}
+.aff a{display:inline-block;max-width:100%;border-radius:10px;overflow:hidden;transition:transform .2s}
 .aff a:hover{transform:scale(1.02)}
 
 /* Conclusion, quick compare, FAQ */

@@ -58,6 +58,11 @@ PRODUCTS = {
         tagline="日々の記帳から確定申告の書類作成まで、クラウドでまとめて進められる",
         points=["銀行口座やクレジットカードと連携して取引を取り込める", "質問に答えながら確定申告の書類を作成できる", "パソコンでもスマートフォンでも使える"],
         article="side-job-tax-return"),
+    "moneyforward": dict(
+        name="マネーフォワード クラウド確定申告", color="sky", icon="receipt", badge="確定申告ソフト",
+        tagline="初めての人でも、画面の案内に沿って確定申告の準備を進められる",
+        points=["銀行口座やクレジットカードの明細を自動で取り込める", "確定申告の書類作成まで進められる", "スマートフォンのアプリからも使える"],
+        article="side-job-tax-return"),
     "xserver": dict(
         name="エックスサーバー", color="sky", icon="server", badge="定番レンタルサーバー",
         tagline="長く使われている国内の定番。困ったときに情報が見つけやすい",
