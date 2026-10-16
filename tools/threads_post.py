@@ -5,6 +5,7 @@ Threads アカウントは全サイト共通。link には投稿内容に対応�
 必要な環境変数（GitHub の Secrets に登録）:
   THREADS_ACCESS_TOKEN  threads_content_publish 権限付きの長期アクセストークン
   THREADS_USER_ID       Threads のユーザーID（省略時は "me"）
+"hold": true の投稿は保留として飛ばす（順番は保ったまま、あとで外せば投稿される）。
 DRY_RUN=1 のときは投稿せず、送る内容を表示するだけ。
 """
 import json
@@ -33,7 +34,7 @@ def call(path, params):
 
 def main():
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
-    post = next((p for p in queue if not p.get("posted_at")), None)
+    post = next((p for p in queue if not p.get("posted_at") and not p.get("hold")), None)
     if post is None:
         print("未投稿の投稿がありません。threads/queue.json に追加してください。")
         return
