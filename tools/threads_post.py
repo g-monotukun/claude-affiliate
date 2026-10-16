@@ -12,6 +12,7 @@ import os
 import pathlib
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -21,8 +22,13 @@ QUEUE = pathlib.Path(__file__).resolve().parent.parent / "threads" / "queue.json
 
 def call(path, params):
     data = urllib.parse.urlencode(params).encode()
-    with urllib.request.urlopen(urllib.request.Request(f"{API}/{path}", data=data), timeout=30) as res:
-        return json.load(res)
+    try:
+        with urllib.request.urlopen(urllib.request.Request(f"{API}/{path}", data=data), timeout=30) as res:
+            return json.load(res)
+    except urllib.error.HTTPError as e:
+        # Threads API はエラーの理由を本文の JSON で返すので、それを表示して止める
+        body = e.read().decode("utf-8", "replace")
+        sys.exit(f"Threads API エラー（HTTP {e.code}）: {body}")
 
 
 def main():
