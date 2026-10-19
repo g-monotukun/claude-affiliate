@@ -1,4 +1,11 @@
-"""threads/queue.json の未投稿の先頭1件を Threads に投稿する。
+"""threads/queue.json の未投稿の投稿から1件を選び、Threads に投稿する。
+
+選ぶ順番:
+  1. リンク先の記事に、広告リンクが登録済みの案件（プログラム）がある投稿を優先
+  2. 同じ条件なら、"season"（投稿に適した月のリスト）に今月（日本時間）が入っている投稿 →
+     "season" がない通年の投稿 → 時期外の投稿 の順
+  3. それも同じなら queue.json に書かれた順
+案件の有無は、記事ページの data-aff と、そのサイトの links.js に登録されたリンクから判定する。
 
 Threads アカウントは全サイト共通。link には投稿内容に対応するサイトの記事URLを完全な形で書く。
 
@@ -8,7 +15,9 @@ Threads アカウントは全サイト共通。link には投稿内容に対応�
 "hold": true の投稿は保留として飛ばす（順番は保ったまま、あとで外せば投稿される）。
 DRY_RUN=1 のときは投稿せず、送る内容を表示するだけ。
 """
+import datetime
 import json
+import re
 import os
 import pathlib
 import sys
@@ -32,9 +41,53 @@ def call(path, params):
         sys.exit(f"Threads API エラー（HTTP {e.code}）: {body}")
 
 
+def fetch(url):
+    try:
+        with urllib.request.urlopen(url, timeout=30) as res:
+            return res.read().decode("utf-8", "replace")
+    except (urllib.error.URLError, TimeoutError) as e:
+        print(f"取得できませんでした（案件なしとして扱います）: {url} {e}")
+        return ""
+
+
+def has_program(link, cache):
+    """記事ページに、links.js でリンクが登録済みの広告枠があるか。"""
+    if not link or "/articles/" not in link:
+        return False
+    base = link.split("/articles/")[0] + "/"
+    if base not in cache:
+        js = fetch(base + "links.js")
+        cache[base] = {k for k, v in re.findall(r"(\w+):\s*`([^`]*)`", js) if v.strip()}
+    keys = set(re.findall(r'data-aff="(\w+)"', fetch(link)))
+    return bool(keys & cache[base])
+
+
+def season_rank(post, month):
+    season = post.get("season")
+    if not season:
+        return 1  # 通年
+    return 2 if month in season else 0
+
+
+def choose(queue, month, check=has_program):
+    cache = {}
+    ranked = []
+    for i, p in enumerate(queue):
+        if p.get("posted_at") or p.get("hold"):
+            continue
+        program = check(p.get("link"), cache)
+        ranked.append(((not program, -season_rank(p, month), i), p))
+    for key, p in sorted(ranked, key=lambda r: r[0]):
+        mark = "案件あり" if not key[0] else "案件なし"
+        print(f"  [{mark} / 時期{-key[1]}] {p.get('site')} {p.get('link') or '(リンクなし)'}")
+    return min(ranked, key=lambda r: r[0])[1] if ranked else None
+
+
 def main():
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
-    post = next((p for p in queue if not p.get("posted_at") and not p.get("hold")), None)
+    month = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).month
+    print(f"候補（上から優先、{month}月）:")
+    post = choose(queue, month)
     if post is None:
         print("未投稿の投稿がありません。threads/queue.json に追加してください。")
         return

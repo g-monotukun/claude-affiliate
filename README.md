@@ -32,7 +32,9 @@ https://g-monotukun.github.io/claude-affiliate/
 - 公開前の内容チェック
 
 ## Threads 自動投稿
-- 投稿の予定は `threads/queue.json`。上から順に、未投稿（`posted_at` がない）ものを1日1件投稿する
+- 投稿の予定は `threads/queue.json`。未投稿（`posted_at` がない）ものから1日1件を選んで投稿する
+- 選ぶ順番：①リンク先の記事に広告リンク登録済みの案件がある ②`season`（適した月のリスト）に今月が入っている → 通年 → 時期外 ③ queue.json の順
+- 案件の有無は自動判定（記事の `data-aff` と各サイトの `links.js`）。案件を設置すれば、その記事の投稿が自動で優先される
 - Threads アカウントは全サイト共通。投稿はすべてこの `threads/queue.json` で管理する
 - `link` に該当サイトの記事URL（https:// から始まる完全なURL）を書くと、リンクカード付きで投稿される（500文字以内）
 - `site` はどのサイトの投稿かのメモ
