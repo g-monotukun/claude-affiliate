@@ -68,6 +68,11 @@ PRODUCTS = {
         tagline="長く使われている国内の定番。困ったときに情報が見つけやすい",
         points=["申込みと同時にWordPressを設定できる機能がある", "利用者が多く、設定方法の解説記事が豊富", "ブログから法人サイトまで幅広く使われている"],
         article="rental-server-choice"),
+    "jetboy": dict(
+        name="JETBOY", color="coral", icon="server", badge="低価格から始められる",
+        tagline="月額500円から使えるプランがある、クラウド型のSSDレンタルサーバー",
+        points=["費用を抑えてブログを始めたい人向けのプランがある", "データの保存にSSDを採用", "必要に応じて上位プランに切り替えられる"],
+        article="rental-server-choice"),
     "conoha_wing": dict(
         name="ConoHa WING", color="teal", icon="server", badge="サーバー＋ドメインを一括",
         tagline="サーバーとドメインをまとめて申し込めるWINGパックが特徴",
