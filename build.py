@@ -70,6 +70,11 @@ PRODUCTS = {
         tagline="長く使われている国内の定番。困ったときに情報が見つけやすい",
         points=["申込みと同時にWordPressを設定できる機能がある", "利用者が多く、設定方法の解説記事が豊富", "ブログから法人サイトまで幅広く使われている"],
         article="rental-server-choice"),
+    "value_ai_writer": dict(
+        name="Value AI Writer byGMO", color="amber", icon="pen", badge="SEO記事生成AI",
+        tagline="キーワードを入れるだけで、SEOを意識したブログ記事の下書きを作れるAIライティングツール",
+        points=["GMOインターネットグループが提供", "キーワードから構成と本文の下書きを作成できる", "無料で試せるプランから始められる（内容は公式サイトで確認）"],
+        article="ai-writing-tools"),
     "flexclip": dict(
         name="FlexClip", color="violet", icon="video", badge="無料で始められる動画編集",
         tagline="パソコンのブラウザだけで使える、オンラインの動画編集ツール",

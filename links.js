@@ -32,6 +32,10 @@ const AFF_LINKS = {
   flexclip_text: ``,
   airwifi: `<a href="https://t.afi-b.com/visit.php?a=O12638e-R4227311&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/12638-1620613199-3.png" width="320" height="50" style="border:none;" alt="AiR-Wi-Fi" /></a><img src="https://t.afi-b.com/lead/O12638e/y997255X/R4227311" width="1" height="1" style="border:none;" />`, // AiR-Wi-Fi（afb）※社名・商標でのリスティング出稿NG
   airwifi_text: ``,
+  value_ai_writer: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEL1L+5GH2EQ+1JUK+1HMIGH" rel="nofollow">
+<img border="0" width="350" height="240" alt="" src="https://www22.a8.net/svt/bgt?aid=261020937330&wid=001&eno=01&mid=s00000007238009007000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEL1L+5GH2EQ+1JUK+1HMIGH" alt="">`, // Value AI Writer byGMO（A8.net）
+  value_ai_writer_text: ``,
 };
 
 document.querySelectorAll("[data-aff]").forEach((el) => {
