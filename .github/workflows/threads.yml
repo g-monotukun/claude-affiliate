@@ -2,7 +2,7 @@ name: Threads 自動投稿
 
 on:
   schedule:
-    - cron: "17 12 * * *" # 毎日 21:17（日本時間）
+    - cron: "17 8 * * *" # 毎日 17:17（日本時間）。GitHub の定期実行は混雑で数時間遅れることが多く、実際の投稿は 21〜22 時ごろになる
   workflow_dispatch:
 
 permissions:
