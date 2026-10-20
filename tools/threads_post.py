@@ -30,15 +30,32 @@ API = "https://graph.threads.net/v1.0"
 QUEUE = pathlib.Path(__file__).resolve().parent.parent / "threads" / "queue.json"
 
 
+INVALID_LINK_ATTACHMENT = 4279047
+
+
+class ThreadsError(Exception):
+    def __init__(self, code, body):
+        super().__init__(f"Threads API エラー（HTTP {code}）: {body}")
+        try:
+            self.subcode = json.loads(body)["error"].get("error_subcode")
+        except (ValueError, KeyError, TypeError):
+            self.subcode = None
+
+
 def call(path, params):
     data = urllib.parse.urlencode(params).encode()
     try:
         with urllib.request.urlopen(urllib.request.Request(f"{API}/{path}", data=data), timeout=30) as res:
             return json.load(res)
     except urllib.error.HTTPError as e:
-        # Threads API はエラーの理由を本文の JSON で返すので、それを表示して止める
-        body = e.read().decode("utf-8", "replace")
-        sys.exit(f"Threads API エラー（HTTP {e.code}）: {body}")
+        # Threads API はエラーの理由を本文の JSON で返す
+        raise ThreadsError(e.code, e.read().decode("utf-8", "replace")) from None
+
+
+def publish(user, params, token):
+    container = call(f"{user}/threads", {**params, "access_token": token})["id"]
+    time.sleep(10)  # コンテナの準備を待つ
+    return call(f"{user}/threads_publish", {"creation_id": container, "access_token": token})
 
 
 def fetch(url):
@@ -107,9 +124,22 @@ def main():
 
     token = os.environ["THREADS_ACCESS_TOKEN"]
     user = os.environ.get("THREADS_USER_ID") or "me"
-    container = call(f"{user}/threads", {**params, "access_token": token})["id"]
-    time.sleep(10)  # コンテナの準備を待つ
-    result = call(f"{user}/threads_publish", {"creation_id": container, "access_token": token})
+    try:
+        try:
+            result = publish(user, params, token)
+        except ThreadsError as e:
+            if e.subcode != INVALID_LINK_ATTACHMENT or "link_attachment" not in params:
+                raise
+            # 公開直後のページなどで Threads がリンクカードを作れないことがある。
+            # その場合はカードなしで、URL を本文に書いて投稿し直す（本文の URL も自動でリンクになる）
+            print(f"リンクカードを付けられなかったため、URLを本文に入れて投稿し直します: {e}")
+            link = params.pop("link_attachment")
+            params["text"] = f"{params['text']}\n{link}"
+            if len(params["text"]) > 500:
+                raise
+            result = publish(user, params, token)
+    except ThreadsError as e:
+        sys.exit(str(e))
     post["posted_at"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     post["thread_id"] = result.get("id")
     QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
