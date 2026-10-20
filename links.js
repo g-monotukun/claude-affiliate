@@ -30,6 +30,8 @@ const AFF_LINKS = {
   jetboy_text: ``,
   flexclip: `<a href="https://t.afi-b.com/visit.php?a=6144096-6473112o&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/14409-1679897742-3.png" width="728" height="90" style="border:none;" alt="FlexClip" /></a><img src="https://t.afi-b.com/lead/6144096/y997255X/6473112o" width="1" height="1" style="border:none;" />`, // FlexClip（afb）※PCでの成果のみ。社名・商標でのリスティング出稿NG
   flexclip_text: ``,
+  airwifi: `<a href="https://t.afi-b.com/visit.php?a=O12638e-R4227311&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/12638-1620613199-3.png" width="320" height="50" style="border:none;" alt="AiR-Wi-Fi" /></a><img src="https://t.afi-b.com/lead/O12638e/y997255X/R4227311" width="1" height="1" style="border:none;" />`, // AiR-Wi-Fi（afb）※社名・商標でのリスティング出稿NG
+  airwifi_text: ``,
 };
 
 document.querySelectorAll("[data-aff]").forEach((el) => {

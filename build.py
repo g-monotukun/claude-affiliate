@@ -41,6 +41,7 @@ ICONS = {
     "code": '<path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4M13.5 5.5l-3 13"/>',
     "receipt": '<path d="M6 3.5h12v17l-2.5-1.5-2 1.5-1.5-1.5-1.5 1.5-2-1.5L6 20.5v-17Z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/>',
     "video": '<rect x="3.5" y="6" width="12.5" height="12" rx="2.5"/><path d="m16 10.5 4.5-2.5v8L16 13.5"/>',
+    "wifi": '<path d="M3.5 9.5a12 12 0 0 1 17 0M6.5 12.5a7.5 7.5 0 0 1 11 0M9.5 15.5a3.2 3.2 0 0 1 5 0"/><path d="M12 19h.01"/>',
     "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     "pen": '<path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/>',
 }
@@ -74,6 +75,11 @@ PRODUCTS = {
         tagline="パソコンのブラウザだけで使える、オンラインの動画編集ツール",
         points=["ソフトのインストールが不要で、ブラウザから使える", "無料プランから試せる（機能や書き出しには制限がある場合あり）", "テンプレートを使って短い動画を作りやすい"],
         article="online-video-editor"),
+    "airwifi": dict(
+        name="AiR-Wi-Fi", color="sky", icon="wifi", badge="ポケット型Wi-Fi",
+        tagline="工事不要ですぐ使えるポケット型Wi-Fi。契約期間の縛りがないプランもある",
+        points=["届いたらすぐ使える。回線工事は不要", "契約期間の縛りがないプランを選べる", "持ち歩けるので、外出先や帰省先でも使える"],
+        article="pocket-wifi-choice"),
     "jetboy": dict(
         name="JETBOY", color="coral", icon="server", badge="低価格から始められる",
         tagline="月額500円から使えるプランがある、クラウド型のSSDレンタルサーバー",
