@@ -40,6 +40,7 @@ ICONS = {
     "sparkle": '<path d="M12 3.5 13.8 9 19.5 11l-5.7 2-1.8 5.5-1.8-5.5L4.5 11l5.7-2L12 3.5Z"/><path d="M18.5 3.5v3M17 5h3"/>',
     "code": '<path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4M13.5 5.5l-3 13"/>',
     "receipt": '<path d="M6 3.5h12v17l-2.5-1.5-2 1.5-1.5-1.5-1.5 1.5-2-1.5L6 20.5v-17Z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/>',
+    "video": '<rect x="3.5" y="6" width="12.5" height="12" rx="2.5"/><path d="m16 10.5 4.5-2.5v8L16 13.5"/>',
     "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     "pen": '<path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/>',
 }
@@ -68,6 +69,11 @@ PRODUCTS = {
         tagline="長く使われている国内の定番。困ったときに情報が見つけやすい",
         points=["申込みと同時にWordPressを設定できる機能がある", "利用者が多く、設定方法の解説記事が豊富", "ブログから法人サイトまで幅広く使われている"],
         article="rental-server-choice"),
+    "flexclip": dict(
+        name="FlexClip", color="violet", icon="video", badge="無料で始められる動画編集",
+        tagline="パソコンのブラウザだけで使える、オンラインの動画編集ツール",
+        points=["ソフトのインストールが不要で、ブラウザから使える", "無料プランから試せる（機能や書き出しには制限がある場合あり）", "テンプレートを使って短い動画を作りやすい"],
+        article="online-video-editor"),
     "jetboy": dict(
         name="JETBOY", color="coral", icon="server", badge="低価格から始められる",
         tagline="月額500円から使えるプランがある、クラウド型のSSDレンタルサーバー",

@@ -28,6 +28,8 @@ const AFF_LINKS = {
 <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4BEHX8+64AELU+3SPO+C8MP3M" alt="">`, // マネーフォワード クラウド 個人事業主向け（A8.net・テキスト）
   jetboy: `<a href="https://t.afi-b.com/visit.php?a=F11620Q-f3887103&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/11620-1587337083-3.jpg" width="468" height="60" style="border:none;" alt="JETBOY" /></a><img src="https://t.afi-b.com/lead/F11620Q/y997255X/f3887103" width="1" height="1" style="border:none;" />`, // JETBOY（afb）※社名・商標でのリスティング出稿NG
   jetboy_text: ``,
+  flexclip: `<a href="https://t.afi-b.com/visit.php?a=6144096-6473112o&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/14409-1679897742-3.png" width="728" height="90" style="border:none;" alt="FlexClip" /></a><img src="https://t.afi-b.com/lead/6144096/y997255X/6473112o" width="1" height="1" style="border:none;" />`, // FlexClip（afb）※PCでの成果のみ。社名・商標でのリスティング出稿NG
+  flexclip_text: ``,
 };
 
 document.querySelectorAll("[data-aff]").forEach((el) => {
