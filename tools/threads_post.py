@@ -97,14 +97,32 @@ def choose(queue, month, check=has_program):
     for key, p in sorted(ranked, key=lambda r: r[0]):
         mark = "案件あり" if not key[0] else "案件なし"
         print(f"  [{mark} / 時期{-key[1]}] {p.get('site')} {p.get('link') or '(リンクなし)'}")
-    return min(ranked, key=lambda r: r[0])[1] if ranked else None
+    if not ranked:
+        return None, 0
+    chosen = min(ranked, key=lambda r: r[0])
+    # 今回の投稿を除いた、案件つきの未投稿の数
+    remaining = sum(1 for key, p in ranked if not key[0] and p is not chosen[1])
+    return chosen[1], remaining
+
+
+LOW_STOCK = 3
+
+
+def report_stock(remaining):
+    """案件つきの未投稿が少なくなったら、GitHub Actions に知らせる（Issue 作成に使う）。"""
+    print(f"案件つきの未投稿: 残り {remaining} 件")
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a", encoding="utf-8") as f:
+            f.write(f"remaining={remaining}\nlow_stock={'true' if remaining < LOW_STOCK else 'false'}\n")
 
 
 def main():
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
     month = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).month
     print(f"候補（上から優先、{month}月）:")
-    post = choose(queue, month)
+    post, remaining = choose(queue, month)
+    report_stock(remaining)
     if post is None:
         print("未投稿の投稿がありません。threads/queue.json に追加してください。")
         return

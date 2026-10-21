@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency: threads-post
 
@@ -19,6 +20,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: 投稿
+        id: post
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
@@ -29,3 +31,21 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add threads/queue.json
           git diff --cached --quiet || (git commit -m "Record Threads post" && git push)
+      - name: 案件つきの投稿が少なくなったら Issue でお知らせ
+        if: steps.post.outputs.low_stock == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REMAINING: ${{ steps.post.outputs.remaining }}
+        run: |
+          if gh issue list --state open --search "in:title Threads 案件つきの投稿" --json number --jq 'length' | grep -qv '^0$'; then
+            echo "お知らせの Issue はすでにあります"
+          else
+            gh issue create --title "Threads：案件つきの投稿が残り${REMAINING}件です" --body "案件（広告リンク）つきの未投稿が少なくなりました（残り ${REMAINING} 件）。
+
+          次のどれかで補充してください。
+          - 承認された案件を記事に組み込む
+          - 今ある記事を別の切り口で紹介する投稿を追加する
+          - 新しいサイトを検討する
+
+          補充できたら、この Issue を閉じてください。"
+          fi
