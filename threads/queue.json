@@ -4,14 +4,16 @@
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
     "posted_at": "2026-10-15T12:19:28+0000",
     "thread_id": "17992727250054580",
-    "site": "AIツール比較ラボ"
+    "site": "AIツール比較ラボ",
+    "kind": "promo"
   },
   {
     "text": "プログラミングの知識ゼロで、AI（Claude Code）に日本語で頼むだけでサイトを作って公開しました。\n\nやったのは「こういうサイトを作って」と伝えて、出来上がりを見て直してほしい点を言うだけ。\n\nただ、ASP登録や公開前チェックなど「人がやるべきこと」も残りました。全部まとめました👇",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/build-site-with-claude-code.html",
     "posted_at": "2026-10-15T17:05:49+0000",
     "thread_id": "18019751981957625",
-    "site": "AIツール比較ラボ"
+    "site": "AIツール比較ラボ",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
@@ -25,14 +27,16 @@
       1,
       2,
       3
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "text": "ブログ用のレンタルサーバー、どう選ぶ？\n\n迷ったらこの2択でOK。\n・情報の多さ重視 → エックスサーバー\n・サーバーとドメインを一度に申し込みたい → ConoHa WING\n\n比べるときの5つの観点も表にしました👇",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/rental-server-choice.html",
     "site": "AIツール比較ラボ",
     "posted_at": "2026-10-16T22:23:35+0000",
-    "thread_id": "18115992566081679"
+    "thread_id": "18115992566081679",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
@@ -46,36 +50,44 @@
       1,
       2,
       3
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "text": "生成AIスクールを検討中の人へ。\n\n申し込む前に必ず確認したいのは\n・自分の職種に合うコースがあるか\n・補助金を含めた「実質いくら」か\n\n無料相談は申し込まなくてもOK。目的を伝えて、合うかどうかを確かめる場として使うのがおすすめです👇",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-school-checklist.html",
     "site": "AIツール比較ラボ",
     "posted_at": "2026-10-17T15:40:11+0000",
-    "thread_id": "17912728509545766"
+    "thread_id": "17912728509545766",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/aga-online-basics.html",
     "text": "抜け毛が気になるけど、クリニックに行くのは正直ハードルが高い。\n\nそんな人向けに、AGAのオンライン診療の流れと、費用を比べるときの考え方をまとめました。\n\n「月額◯円」だけで比べず、診察料・配送料・解約条件まで含めた総額で見るのがポイントです👇",
     "posted_at": "2026-10-18T15:55:39+0000",
-    "thread_id": "17952595074335168"
+    "thread_id": "17952595074335168",
+    "kind": "promo"
   },
   {
     "text": "副業ブログに独自ドメインは必要？\n\nお試し段階なら無料URLで十分。\nでも「長く続ける」と決めたなら、記事が少ないうちに切り替えるのが楽です。\n\nあとから引っ越すほど手間が増えるので、判断の目安をまとめました👇",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/need-own-domain.html",
     "site": "AIツール比較ラボ",
     "posted_at": "2026-10-19T18:45:20+0000",
-    "thread_id": "18124365233316054"
+    "thread_id": "18124365233316054",
+    "kind": "promo"
   },
   {
     "text": "AIに仕事のデータを入力する前に、ひとつだけ確認してほしいこと。\n\n「入力した内容がAIの学習に使われる設定になっていないか」\n\nツールごとに規約や設定が違います。会社のルールがあればそちらが最優先です。",
-    "site": "AIツール比較ラボ"
+    "site": "AIツール比較ラボ",
+    "kind": "tip",
+    "theme": "ai"
   },
   {
     "text": "AIツール選びで一番大事なのは、ツールを比べる前に「何を任せたいか」を決めること。\n\n「ブログの下書き」「会議の議事録」「SNS用の画像」\n\nここが決まると、比べるべきツールは一気に絞れます。",
-    "site": "AIツール比較ラボ"
+    "site": "AIツール比較ラボ",
+    "kind": "tip",
+    "theme": "ai"
   },
   {
     "site": "AIツール比較ラボ",
@@ -87,7 +99,8 @@
       1,
       2,
       3
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -99,7 +112,8 @@
       1,
       7,
       8
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -112,7 +126,8 @@
       3,
       7,
       8
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -124,14 +139,16 @@
       1,
       7,
       8
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
     "text": "Threads用の短い動画、編集ソフトを入れなくても作れます。\n\nパソコンのブラウザだけで使えるオンライン動画編集ツールなら、テンプレートを選んで素材を入れるだけ。\n\n無料プランで確認したいのは「画質・ロゴの有無・長さ・素材」の4つ。\n\n保存して、パソコンで開いてみてください👇",
     "posted_at": "2026-10-20T22:20:27+0000",
-    "thread_id": "18023931719712605"
+    "thread_id": "18023931719712605",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
@@ -143,26 +160,30 @@
       8
     ],
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/pocket-wifi-choice.html",
-    "text": "年末年始に帰省したら、実家にWi-Fiがない問題。\n\n工事なしで届いたらすぐ使えるポケット型Wi-Fiなら、帰省先でも出張先でもOK。\n\n契約前に見るべきは「データ容量・契約期間・解約時の費用・速度制限・エリア」の5つ。\n月額の安さだけで選ぶと後悔しがちです👇"
+    "text": "年末年始に帰省したら、実家にWi-Fiがない問題。\n\n工事なしで届いたらすぐ使えるポケット型Wi-Fiなら、帰省先でも出張先でもOK。\n\n契約前に見るべきは「データ容量・契約期間・解約時の費用・速度制限・エリア」の5つ。\n月額の安さだけで選ぶと後悔しがちです👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
     "text": "ブログ記事、AIに書かせてますか？\n\n下書きはAIに任せて、仕上げは人がやる。この分担がいちばん効率的でした。\n\n公開前に必ず確認したいのは\n・数字や制度などの事実\n・PR表記\n・「最安」「必ず」などの言い過ぎ\n\nAIライティングツールの選び方もまとめました👇",
     "posted_at": "2026-10-21T13:51:46+0000",
-    "thread_id": "18000506358001510"
+    "thread_id": "18000506358001510",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/hair-clinic-vs-salon.html",
     "text": "薄毛の相談、クリニックとサロンのどっちに行けばいいか迷っていませんか。\n\nいちばんの違いは「医療機関かどうか」。\n原因を調べたい・薬で治療したいならクリニック、頭皮のケアを相談したいならサロン。\n\nサロンでは診断や薬の処方はできません。目的に合わせて選ぶのがポイントです👇",
     "posted_at": "2026-10-22T11:57:06+0000",
-    "thread_id": "18103957112564720"
+    "thread_id": "18103957112564720",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
-    "text": "男の肌荒れ、洗顔だけで終わらせていませんか。\n\n基本はこの3つ。\n・ゴシゴシ洗わない\n・ヒゲ剃りのあとは保湿\n・外に出る日は日焼け止め\n\nそれでもニキビを繰り返す、跡が気になるなら、皮膚科や美容クリニックで医師に相談するのも手です。\n相談先の選び方もまとめました👇"
+    "text": "男の肌荒れ、洗顔だけで終わらせていませんか。\n\n基本はこの3つ。\n・ゴシゴシ洗わない\n・ヒゲ剃りのあとは保湿\n・外に出る日は日焼け止め\n\nそれでもニキビを繰り返す、跡が気になるなら、皮膚科や美容クリニックで医師に相談するのも手です。\n相談先の選び方もまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -174,7 +195,8 @@
       8
     ],
     "link": "https://g-monotukun.github.io/parents-consultation/articles/hard-to-discard.html",
-    "text": "実家の片づけで、手が止まる物がありませんか。\n\n親が大切にしていた人形、古いアルバム、手紙。\nごみ袋に入れるのは気が引けるけど、全部は残せない。\n\n写真に撮って残す、一部だけ形見にする、お焚き上げで供養する。\n気持ちに区切りをつけながら手放す方法をまとめました👇"
+    "text": "実家の片づけで、手が止まる物がありませんか。\n\n親が大切にしていた人形、古いアルバム、手紙。\nごみ袋に入れるのは気が引けるけど、全部は残せない。\n\n写真に撮って残す、一部だけ形見にする、お焚き上げで供養する。\n気持ちに区切りをつけながら手放す方法をまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -187,12 +209,14 @@
       8
     ],
     "link": "https://g-monotukun.github.io/parents-consultation/articles/antique-appraisal.html",
-    "text": "実家の押し入れから出てきた古い掛け軸や茶道具、捨てる前にちょっと待ってください。\n\n価値が分からない物は、無料査定で確かめてからでも遅くありません。\n\n出張買取には、原則8日間のクーリング・オフなど売る側を守るルールもあります。\n知っておきたい注意点をまとめました👇"
+    "text": "実家の押し入れから出てきた古い掛け軸や茶道具、捨てる前にちょっと待ってください。\n\n価値が分からない物は、無料査定で確かめてからでも遅くありません。\n\n出張買取には、原則8日間のクーリング・オフなど売る側を守るルールもあります。\n知っておきたい注意点をまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/rental-server-choice.html",
-    "text": "ブログを始めるとき、いちばん迷うのがサーバー選び。\n\n結論から言うと、初心者はこの3つで考えればOKです。\n・情報の多さ重視 → エックスサーバー\n・ドメインもまとめて → ConoHa WING\n・まず安く試したい → JETBOY\n\n比べるときの5つの観点を表にしました👇"
+    "text": "ブログを始めるとき、いちばん迷うのがサーバー選び。\n\n結論から言うと、初心者はこの3つで考えればOKです。\n・情報の多さ重視 → エックスサーバー\n・ドメインもまとめて → ConoHa WING\n・まず安く試したい → JETBOY\n\n比べるときの5つの観点を表にしました👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
@@ -201,17 +225,20 @@
     "season": [
       3,
       4
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/need-own-domain.html",
-    "text": "無料ブログで書き始めて半年。\n「独自ドメインにしておけばよかった」と思う人、実は多いです。\n\n理由はシンプルで、記事が増えてからの引っ越しは手間がかかるから。\n\n切り替えるならいつがいいか、目安をまとめました👇"
+    "text": "無料ブログで書き始めて半年。\n「独自ドメインにしておけばよかった」と思う人、実は多いです。\n\n理由はシンプルで、記事が増えてからの引っ越しは手間がかかるから。\n\n切り替えるならいつがいいか、目安をまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/need-own-domain.html",
-    "text": "ブログのURL、自分の名前やサイト名になっていますか？\n\n独自ドメインのメリットは3つ。\n①サーバーを変えてもURLが変わらない\n②覚えてもらいやすい\n③記事の評価がドメインに積み上がる\n\nデメリットも正直に書きました👇"
+    "text": "ブログのURL、自分の名前やサイト名になっていますか？\n\n独自ドメインのメリットは3つ。\n①サーバーを変えてもURLが変わらない\n②覚えてもらいやすい\n③記事の評価がドメインに積み上がる\n\nデメリットも正直に書きました👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
@@ -223,7 +250,8 @@
       1,
       2,
       3
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
@@ -233,7 +261,8 @@
       1,
       2,
       3
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
@@ -242,17 +271,20 @@
     "season": [
       11,
       12
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
-    "text": "Threads用の15秒動画、スマホで作るの大変じゃないですか？\n\nパソコンのブラウザだけで使える動画編集ツールなら、テンプレートを選んで素材を入れるだけ。\nソフトのインストールもいりません。\n\n無料プランで確認したい4つのポイント👇（パソコンで開くのがおすすめ）"
+    "text": "Threads用の15秒動画、スマホで作るの大変じゃないですか？\n\nパソコンのブラウザだけで使える動画編集ツールなら、テンプレートを選んで素材を入れるだけ。\nソフトのインストールもいりません。\n\n無料プランで確認したい4つのポイント👇（パソコンで開くのがおすすめ）",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
-    "text": "動画編集ソフトを買う前に、ちょっと待ってください。\n\nたまに短い動画を作るくらいなら、無料で始められるオンラインのツールで足りることが多いです。\n\n「画質・ロゴ・長さ・素材」の4つを無料プランで確かめてから決めるのがコツ👇"
+    "text": "動画編集ソフトを買う前に、ちょっと待ってください。\n\nたまに短い動画を作るくらいなら、無料で始められるオンラインのツールで足りることが多いです。\n\n「画質・ロゴ・長さ・素材」の4つを無料プランで確かめてから決めるのがコツ👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
@@ -261,47 +293,56 @@
     "season": [
       3,
       4
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/pocket-wifi-choice.html",
-    "text": "カフェで作業したいのに、フリーWi-Fiが遅い・不安。\n\n持ち歩けるポケット型Wi-Fiがあると、場所を選ばず作業できます。\n\n「縛りなし」プランを選ぶときの注意点もまとめました👇"
+    "text": "カフェで作業したいのに、フリーWi-Fiが遅い・不安。\n\n持ち歩けるポケット型Wi-Fiがあると、場所を選ばず作業できます。\n\n「縛りなし」プランを選ぶときの注意点もまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
-    "text": "AIで書いた記事、そのまま公開していませんか？\n\nAIは、事実と違うことをもっともらしく書くことがあります。\n\n公開前にチェックしたいのは\n・数字や制度\n・PR表記\n・「最安」「必ず」などの言い過ぎ\n\nAIライティングツールの選び方もまとめました👇"
+    "text": "AIで書いた記事、そのまま公開していませんか？\n\nAIは、事実と違うことをもっともらしく書くことがあります。\n\n公開前にチェックしたいのは\n・数字や制度\n・PR表記\n・「最安」「必ず」などの言い過ぎ\n\nAIライティングツールの選び方もまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "AIツール比較ラボ",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
-    "text": "ChatGPTで記事を書くのと、記事作成専用のAIツールを使うのは何が違う？\n\n専用ツールは、キーワードを入れるだけで構成から下書きまで作れるのが強み。\nプロンプトを考えるのが苦手な人に向いています。\n\n違いを表にしました👇"
+    "text": "ChatGPTで記事を書くのと、記事作成専用のAIツールを使うのは何が違う？\n\n専用ツールは、キーワードを入れるだけで構成から下書きまで作れるのが強み。\nプロンプトを考えるのが苦手な人に向いています。\n\n違いを表にしました👇",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/aga-online-basics.html",
-    "text": "抜け毛が増えた気がする。でも、誰にも相談できない。\n\n今は、自宅からスマホで医師に相談できるオンライン診療もあります。\n\nAGAの治療は自由診療なので、比べるときは「月額」だけでなく診察料・配送料・解約条件まで見るのがポイント👇"
+    "text": "抜け毛が増えた気がする。でも、誰にも相談できない。\n\n今は、自宅からスマホで医師に相談できるオンライン診療もあります。\n\nAGAの治療は自由診療なので、比べるときは「月額」だけでなく診察料・配送料・解約条件まで見るのがポイント👇",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/aga-online-basics.html",
-    "text": "薄毛の相談、いきなり治療を決めなくて大丈夫です。\n\n無料カウンセリングで費用や進め方を聞いてから、受けるかどうかを判断できます。\n\n受診前に確認しておきたいことをまとめました👇"
+    "text": "薄毛の相談、いきなり治療を決めなくて大丈夫です。\n\n無料カウンセリングで費用や進め方を聞いてから、受けるかどうかを判断できます。\n\n受診前に確認しておきたいことをまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/hair-clinic-vs-salon.html",
-    "text": "「育毛サロン」と「AGAクリニック」、同じだと思っていませんか？\n\nサロンは医療機関ではないので、診断や薬の処方はできません。\n\n原因を調べたいならクリニック、頭皮ケアを相談したいならサロン。\n目的別の選び方👇"
+    "text": "「育毛サロン」と「AGAクリニック」、同じだと思っていませんか？\n\nサロンは医療機関ではないので、診断や薬の処方はできません。\n\n原因を調べたいならクリニック、頭皮ケアを相談したいならサロン。\n目的別の選び方👇",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/hair-clinic-vs-salon.html",
-    "text": "薄毛の無料相談に行く前に、これだけは覚えておいてください。\n\n「その場で契約しなくていい」\n\n総額・解約のルール・効果の説明の根拠。\n持ち帰って考えてから決めて大丈夫です👇"
+    "text": "薄毛の無料相談に行く前に、これだけは覚えておいてください。\n\n「その場で契約しなくていい」\n\n総額・解約のルール・効果の説明の根拠。\n持ち帰って考えてから決めて大丈夫です👇",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
-    "text": "ヒゲ剃りのあと、肌がヒリヒリしていませんか。\n\n男性の肌荒れは、カミソリの刺激と保湿不足が原因のことも多いです。\n\n・シェービング剤を使う\n・毛の流れに沿って剃る\n・剃ったあとは保湿\n\n今日からできるケアと、受診の目安👇"
+    "text": "ヒゲ剃りのあと、肌がヒリヒリしていませんか。\n\n男性の肌荒れは、カミソリの刺激と保湿不足が原因のことも多いです。\n\n・シェービング剤を使う\n・毛の流れに沿って剃る\n・剃ったあとは保湿\n\n今日からできるケアと、受診の目安👇",
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
@@ -314,12 +355,14 @@
       6,
       7,
       8
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "メンズケア相談室",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
-    "text": "美容クリニック、女性ばかりで行きにくい。\n\nそんな男性向けに、男性専門の美容クリニックもあります。\n\nニキビや毛穴の悩みを医師に相談する前に、確認しておきたいポイントをまとめました👇"
+    "text": "美容クリニック、女性ばかりで行きにくい。\n\nそんな男性向けに、男性専門の美容クリニックもあります。\n\nニキビや毛穴の悩みを医師に相談する前に、確認しておきたいポイントをまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -328,7 +371,8 @@
     "season": [
       12,
       1
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -337,7 +381,8 @@
     "season": [
       7,
       8
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -346,7 +391,8 @@
     "season": [
       11,
       12
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -356,12 +402,14 @@
       11,
       12,
       1
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
     "link": "https://g-monotukun.github.io/parents-consultation/articles/cleanup-estimate.html",
-    "text": "実家の片づけ業者、1社だけで決めていませんか？\n\n料金は物の量や作業内容で大きく変わります。\n複数社の見積もりを比べて、作業範囲と追加料金の条件を書面で確認するのが基本。\n\nトラブルを避けるチェックポイント👇"
+    "text": "実家の片づけ業者、1社だけで決めていませんか？\n\n料金は物の量や作業内容で大きく変わります。\n複数社の見積もりを比べて、作業範囲と追加料金の条件を書面で確認するのが基本。\n\nトラブルを避けるチェックポイント👇",
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -370,12 +418,14 @@
     "season": [
       12,
       1
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
     "link": "https://g-monotukun.github.io/parents-consultation/articles/hard-to-discard.html",
-    "text": "親のアルバム、全部は残せない。でも捨てられない。\n\n・写真に撮って残す\n・大切な数枚だけ手元に\n・残りは供養して手放す\n\n気持ちに区切りをつけながら片づける方法をまとめました👇"
+    "text": "親のアルバム、全部は残せない。でも捨てられない。\n\n・写真に撮って残す\n・大切な数枚だけ手元に\n・残りは供養して手放す\n\n気持ちに区切りをつけながら片づける方法をまとめました👇",
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
@@ -385,11 +435,213 @@
       11,
       12,
       1
-    ]
+    ],
+    "kind": "promo"
   },
   {
     "site": "親と実家の相談室",
     "link": "https://g-monotukun.github.io/parents-consultation/articles/antique-appraisal.html",
-    "text": "出張買取で売ったあと「やっぱりやめたい」と思ったら。\n\n出張買取は「訪問購入」にあたり、原則として書面を受け取ってから8日間はクーリング・オフができます。\n\n売る前に知っておきたいルールをまとめました👇"
+    "text": "出張買取で売ったあと「やっぱりやめたい」と思ったら。\n\n出張買取は「訪問購入」にあたり、原則として書面を受け取ってから8日間はクーリング・オフができます。\n\n売る前に知っておきたいルールをまとめました👇",
+    "kind": "promo"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "動画編集とゲーム制作を始めたら、パソコンの空き容量があっという間になくなりました。\n\n容量が足りなくなったら、まずやること。\n・大きいファイル順に並べて、使っていない素材を整理\n・書き出し済みの動画は外付けやクラウドへ\n・同じ素材のコピーが何個もないか確認\n\n地味だけど、これだけでかなり空きます。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
+    "reply_text": "ソフトを入れずにブラウザで編集できるツールを使うのも、容量を食わない方法のひとつです👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "ChatGPTとClaude Code、両方使っています。\n\n自分の使い分けはこんな感じ。\n・ChatGPT：相談、アイデア出し、文章の言い換え\n・Claude Code：ファイルを作る・直す「作業」そのもの\n\n「考える相手」と「手を動かす相手」で分けると、迷わなくなりました。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
+    "reply_text": "ブログ記事づくりにAIを使うときの選び方と注意点はこちら👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "AIに文章を書いてもらうとき、最後に一言足すだけで読みやすさが変わります。\n\n「中学生にも分かるように書いて」\n\n専門用語が減って、一文が短くなります。説明文や記事の下書きに使えます。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
+    "reply_text": "AIで記事を書くときに、人が確認すべきポイントもまとめました👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "副業の確定申告、年明けに慌てないための小ワザ。\n\nサーバー代やツール代の領収書は、届いたその日にスマホで撮って1つのフォルダへ。\n\n「あとでまとめて」は、だいたい探すところから始まります。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/side-job-tax-return.html",
+    "reply_text": "副業の確定申告で見落としがちなポイントはこちら👇",
+    "season": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "ヒゲ剃りのあと、ヒリヒリする人へ。\n\n・シェービング剤を使う\n・毛の流れに沿って剃る\n・剃ったあとは保湿\n\nこの3つだけでも、肌への負担はだいぶ変わります。",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
+    "reply_text": "男性の肌荒れ・ニキビのセルフケアと、受診の目安はこちら👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "20代から薄毛が気になって、外出するときは帽子が手放せませんでした。\n\nずっとかぶっていると、夏は特に頭が蒸れます。\nときどき帽子を外して汗をふく、帰ったらきちんと洗う。\n\n隠すことばかり考えていた頃の自分に、教えてあげたかったことです。",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/aga-online-basics.html",
+    "reply_text": "ひとりで悩まず、まず相談するという選択肢についてまとめました👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "男性こそ、日焼け止めを。\n\n紫外線は、肌荒れやシミの原因のひとつ。\nヒゲ剃り後の肌はとくにダメージを受けやすいです。\n\nベタつかないジェルタイプなら、男性でも続けやすいですよ。",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
+    "reply_text": "男性向けのスキンケアの基本をまとめました👇",
+    "season": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "祖父母の家のエアコン、夏や冬に使い始める前にクリーニング業者を頼むようにしています。\n\n使う時期に入ってからだと、予約が取りにくいんです。\n離れて暮らしていても、業者の予約なら代わりにできます。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "離れて暮らす家族の暮らしで、確認しておきたいポイントはこちら👇",
+    "season": [
+      4,
+      5,
+      6,
+      9,
+      10
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "祖父母の家に掃除に行くとき、さりげなく見ているところがあります。\n\n・冷蔵庫の中（同じ物がたくさんないか）\n・郵便物（たまっていないか）\n・足元（転びそうな物がないか）\n\n本人に聞くより、暮らしの様子のほうが正直だったりします。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省のときのチェックリストをまとめました👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "親や祖父母の暮らしが心配になったら、まず相談できるのが「地域包括支援センター」。\n\n住んでいる地域ごとにある、高齢者の暮らしと介護の総合窓口です。相談は無料。\n\n離れて暮らす家族からの相談もできます。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "気になることがあったときの相談先をまとめました👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "実家の片づけで、どうしても捨てられない物が出てきたら。\n\nまず写真に撮ってみてください。\n物はなくなっても、思い出は残せます。\n\nそれでも手放せない物は、供養して手放す方法もあります。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/hard-to-discard.html",
+    "reply_text": "捨てにくい物の手放し方をまとめました👇"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "出張買取で売ったあとに「やっぱりやめたい」と思ったら。\n\n出張買取は原則として、書面を受け取ってから8日間はクーリング・オフができます。\n\n知っているだけで、焦らずに判断できます。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/antique-appraisal.html",
+    "reply_text": "出張買取を使う前に知っておきたいルールはこちら👇"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "ゲーム制作、理想が先に走って途中で止まった経験ありませんか？\n\n自分は「こんな機能も、あんな演出も」と考えているうちに、何度も完成させられずに終わりました。\n\n最後まで作りきれた人、どうやって範囲を絞りましたか？"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "ChatGPTとClaude、どう使い分けてますか？\n\n自分は相談はChatGPT、手を動かす作業はClaude Codeに任せることが多いです。\n\nみなさんの「これはこっちのAI」というこだわり、聞いてみたいです。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
+    "reply_text": "AIで記事を書くときの使い分けと注意点は、こちらにまとめています👇"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "短い動画を作るとき、スマホ派ですか？パソコン派ですか？\n\n自分はパソコン派ですが、素材が増えるたびにストレージがパンパンになるのが悩みです。\n\nみなさんは容量問題、どうしてますか？",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
+    "reply_text": "パソコンのブラウザだけで使える動画編集ツールの選び方はこちら👇"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "ブログを始めようとして、最初の一歩で止まっている人いませんか？\n\nサーバー？ドメイン？WordPress？\n言葉が多すぎて、何から手をつければいいか分からないんですよね。\n\nいちばん迷ったところ、どこでした？",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/rental-server-choice.html",
+    "reply_text": "初心者がサーバーを選ぶときの考え方をまとめました👇"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "20代の頃、外に出るときは必ず帽子をかぶっていました。\n\n薄毛のこと、誰にも言えなかったんですよね。\n\n同じように悩んでいた人、誰かに相談できましたか？ それとも一人で抱えていましたか？",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/aga-online-basics.html",
+    "reply_text": "一人で悩んでいる人に向けて、相談するまでの流れをまとめました👇"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "友達に薄毛を指摘されたこと、ありますか？\n\n笑って流したけど、帰り道ずっと引きずっていました。\n\nあのとき、どう返すのが正解だったんでしょうね。",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/hair-clinic-vs-salon.html",
+    "reply_text": "薄毛の相談先、クリニックとサロンの違いをまとめました👇"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "ヒゲや体毛、気になるところはどこですか？\n\n鼻の下、あご、腕、すね…\n夏になると急に気になり出すんですよね。\n\n自分で処理してる派？ 脱毛を考えてる派？",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/beard-removal-timing.html",
+    "reply_text": "ヒゲ脱毛を始める時期の考え方をまとめました👇"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "男ひとりで美容クリニックや皮膚科、行けますか？\n\n肌の悩みはあるのに、なんとなく行きにくい。\n\n何があったら「行ってみよう」と思えますか？",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
+    "reply_text": "男性の肌荒れで医療機関に相談する目安をまとめました👇"
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "祖父母の家に行くたびに、生活に困っていないか、さりげなく確認するようにしています。\n\n離れて暮らす家族の様子、みなさんはどうやって気にかけていますか？\n電話？ 見守りの道具？ 近所の人？",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省のときに確認したいことをまとめました👇"
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "実家の片づけ、家族の中で誰が言い出しましたか？\n\n言い出した人が全部やる流れになりがちなんですよね。\n\nみなさんの家は、どうやって分担しましたか？",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/cleanup-estimate.html",
+    "reply_text": "業者に頼む場合の、見積もりの取り方と注意点はこちら👇",
+    "season": [
+      11,
+      12,
+      1,
+      3
+    ]
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "実家に、どうしても捨てられない物ってありますか？\n\n親のアルバム、子どもの頃の作品、もらい物の人形。\n\n理由は分からないけど、手が止まる物。みなさんの家にもありますか？",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/hard-to-discard.html",
+    "reply_text": "捨てにくい物の手放し方をまとめました👇"
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "帰省したら親や祖父母と話したいこと、ちゃんと話せていますか？\n\nいざ顔を合わせると、「元気そうだし、また今度でいいか」ってなるんですよね。\n\nみなさんは、どうやって切り出していますか？",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省のときのチェックリストと、話し合いのコツをまとめました👇",
+    "season": [
+      12,
+      1,
+      7,
+      8
+    ]
   }
 ]
