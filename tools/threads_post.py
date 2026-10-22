@@ -7,6 +7,11 @@
   3. それも同じなら queue.json に書かれた順
 案件の有無は、記事ページの data-aff と、そのサイトの links.js に登録されたリンクから判定する。
 
+投稿の時間帯（日本時間）は SLOTS の3枠。ワークフローは1時間ごとに起動し、
+今が枠の中で、その枠でまだ投稿していなければ1件投稿する（手動実行は FORCE=1 で時間帯を無視）。
+案件つきの未投稿がなくなったら、案件つきの投稿済みのうち、時期が合い、
+前回から RECYCLE_DAYS 日以上たったものをもう一度投稿する。
+
 Threads アカウントは全サイト共通。link には投稿内容に対応するサイトの記事URLを完全な形で書く。
 
 必要な環境変数（GitHub の Secrets に登録）:
@@ -117,12 +122,60 @@ def report_stock(remaining):
             f.write(f"remaining={remaining}\nlow_stock={'true' if remaining < LOW_STOCK else 'false'}\n")
 
 
+JST = datetime.timezone(datetime.timedelta(hours=9))
+SLOTS = [(7, 9), (12, 14), (20, 23)]  # 朝・昼・夜（開始時〜終了時の前まで）
+RECYCLE_DAYS = 30
+
+
+def posted_times(post):
+    times = [post["posted_at"]] if post.get("posted_at") else []
+    times += post.get("reposted_at", [])
+    return [datetime.datetime.strptime(s, "%Y-%m-%dT%H:%M:%S%z").astimezone(JST) for s in times]
+
+
+def current_slot(now):
+    return next(((s, e) for s, e in SLOTS if s <= now.hour < e), None)
+
+
+def already_posted_in_slot(queue, now, slot):
+    start = now.replace(hour=slot[0], minute=0, second=0, microsecond=0)
+    return any(start <= t <= now for p in queue for t in posted_times(p))
+
+
+def choose_recycle(queue, now, check=has_program):
+    """案件つきの投稿済みから、時期が合い、前回から RECYCLE_DAYS 日以上たったものを選ぶ。"""
+    cache = {}
+    ranked = []
+    for i, p in enumerate(queue):
+        times = posted_times(p)
+        if not times or p.get("hold") or (now - max(times)).days < RECYCLE_DAYS:
+            continue
+        if check(p.get("link"), cache):
+            ranked.append(((-season_rank(p, now.month), max(times), i), p))
+    return min(ranked, key=lambda r: r[0])[1] if ranked else None
+
+
 def main():
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
-    month = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).month
+    now = datetime.datetime.now(JST)
+    if os.environ.get("FORCE") != "1":
+        slot = current_slot(now)
+        if slot is None:
+            print(f"{now:%H:%M} は投稿の時間帯ではありません。")
+            return
+        if already_posted_in_slot(queue, now, slot):
+            print(f"{slot[0]}時台の枠では投稿済みです。")
+            return
+    month = now.month
     print(f"候補（上から優先、{month}月）:")
     post, remaining = choose(queue, month)
     report_stock(remaining)
+    recycled = False
+    if remaining == 0 and (post is None or not has_program(post.get("link"), {})):
+        again = choose_recycle(queue, now)
+        if again is not None:
+            print(f"案件つきの未投稿がないため、前回から{RECYCLE_DAYS}日以上たった投稿をもう一度使います: {again.get('link')}")
+            post, recycled = again, True
     if post is None:
         print("未投稿の投稿がありません。threads/queue.json に追加してください。")
         return
@@ -158,8 +211,13 @@ def main():
             result = publish(user, params, token)
     except ThreadsError as e:
         sys.exit(str(e))
-    post["posted_at"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
-    post["thread_id"] = result.get("id")
+    stamp = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+    if recycled:
+        post.setdefault("reposted_at", []).append(stamp)
+        post.setdefault("reposted_ids", []).append(result.get("id"))
+    else:
+        post["posted_at"] = stamp
+        post["thread_id"] = result.get("id")
     QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"投稿しました: {post['thread_id']}")
 

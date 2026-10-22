@@ -2,7 +2,9 @@ name: Threads 自動投稿
 
 on:
   schedule:
-    - cron: "17 8 * * *" # 毎日 17:17（日本時間）。GitHub の定期実行は混雑で数時間遅れることが多く、実際の投稿は 21〜22 時ごろになる
+    # 1時間ごとに起動し、朝7〜9時・昼12〜14時・夜20〜23時（日本時間）の各枠で1件ずつ投稿する。
+    # GitHub の定期実行は遅れることがあるため、枠の中で何度か起動できるよう毎時にしている
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,6 +26,7 @@ jobs:
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: python3 tools/threads_post.py
       - name: 投稿済みの記録を保存
         run: |
