@@ -26,6 +26,8 @@ promo の選び方:
 tip・question の選び方:
   THEME_WEIGHTS の月ごとの重みでテーマを選び、そのテーマの未投稿から season が合うものを優先する。
   なければ別のテーマ、それもなければ RECYCLE_DAYS 日以上たったものを再投稿する。
+PR表記:
+  記事リンクを付ける投稿（promo と、記事リンクの返信）には、本文の最後に「#PR」を自動で入れる。
 返信:
   reply_link のある投稿は、投稿から REPLY_AFTER_MIN 分以上たった次の起動で、自分の投稿に返信して記事リンクを付ける。
 
@@ -265,6 +267,11 @@ def due_reply(queue, now):
 
 # ---- メイン --------------------------------------------------------------------
 
+def with_pr(text):
+    """記事リンク（広告のあるページ）を付ける投稿には、PR 表記を入れる（ステマ規制・広告主の規約への対応）。"""
+    return text if "#PR" in text or "【PR】" in text else f"{text}\n\n#PR"
+
+
 def stamp():
     return time.strftime("%Y-%m-%dT%H:%M:%S%z")
 
@@ -284,7 +291,7 @@ def main():
     reply_post = due_reply(queue, now)
     if reply_post is not None:
         params = {"media_type": "TEXT", "reply_to_id": latest_thread_id(reply_post),
-                  "text": reply_post.get("reply_text") or "まとめた記事はこちらです👇",
+                  "text": with_pr(reply_post.get("reply_text") or "まとめた記事はこちらです👇"),
                   "link_attachment": reply_post["reply_link"]}
         if dry:
             print("[DRY RUN] 返信:", json.dumps(params, ensure_ascii=False))
@@ -335,6 +342,9 @@ def main():
         if not post["link"].startswith("https://"):
             sys.exit(f"link は https:// から始まる完全なURLで書いてください: {post['link']}")
         params["link_attachment"] = post["link"]
+        params["text"] = with_pr(text)
+        if len(params["text"]) > 500:
+            sys.exit(f"PR表記を入れると500文字を超えます（{len(params['text'])}文字）: {text[:30]}…")
 
     if dry:
         print("[DRY RUN] 次の内容を投稿します:")
