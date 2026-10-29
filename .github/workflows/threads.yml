@@ -7,6 +7,11 @@ on:
     # 起動の機会を増やして各枠で確実に1回は動くようにしている。枠外・投稿済みの回は数秒で終わる
     - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "時間帯に関係なくすぐ1件投稿する（外部の定時起動からは false で呼ぶ）"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -27,7 +32,7 @@ jobs:
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
-          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force && '1' || '0' }}
         run: python3 tools/threads_post.py
       - name: 投稿済みの記録を保存
         run: |
