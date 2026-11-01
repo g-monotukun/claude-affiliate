@@ -596,7 +596,10 @@
     "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/hard-to-discard.html",
     "reply_text": "捨てにくい物の手放し方をまとめました👇",
     "posted_at": "2026-10-31T23:42:14+0000",
-    "thread_id": "18170279833414384"
+    "thread_id": "18170279833414384",
+    "replied_at": [
+      "2026-11-01T04:42:39+0000"
+    ]
   },
   {
     "kind": "tip",
@@ -689,7 +692,9 @@
       12,
       1,
       3
-    ]
+    ],
+    "posted_at": "2026-11-01T04:42:53+0000",
+    "thread_id": "18073595801767682"
   },
   {
     "kind": "question",
