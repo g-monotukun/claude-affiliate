@@ -852,5 +852,18 @@
       1,
       2
     ]
+  },
+  {
+    "site": "AIツール比較ラボ",
+    "kind": "promo",
+    "link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
+    "text": "写真1枚から、動く動画が作れる時代になりました。\n\n画像や動画をもとにAIで動画を作るツールなら、口の動きを音声に合わせるリップシンクまでできます。\n\nただし、他人の顔や声を勝手に使うのはトラブルのもと。使う前に知っておきたい注意点もまとめています。"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
+    "reply_text": "AIで動画を作るときの注意点はこちらにまとめています",
+    "text": "AIで動画を作るとき、いちばん気をつけたいのは「誰の顔・誰の声か」。\n\n本人の同意なく、顔写真や声を使って動画を作るのはトラブルのもとです。\n\n自分で用意した素材か、使ってよい素材かを確認してから。"
   }
 ]

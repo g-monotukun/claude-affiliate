@@ -36,6 +36,8 @@ const AFF_LINKS = {
 <img border="0" width="350" height="240" alt="" src="https://www22.a8.net/svt/bgt?aid=261020937330&wid=001&eno=01&mid=s00000007238009007000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEL1L+5GH2EQ+1JUK+1HMIGH" alt="">`, // Value AI Writer byGMO（A8.net）
   value_ai_writer_text: ``,
+  domoai: `<a href="https://t.afi-b.com/visit.php?a=v16143A-8531425i&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/16143-1779861638-3.png" width="350" height="350" style="border:none;" alt="DomoAI リップシンク" /></a><img src="https://t.afi-b.com/lead/v16143A/y997255X/8531425i" width="1" height="1" style="border:none;" />`, // DomoAI（afb）※社名・商標でのリスティング出稿NG／クーポン 7VVTQQZ5（初回購入、月額10%・年額40%OFF）
+  domoai_text: ``,
 };
 
 document.querySelectorAll("[data-aff]").forEach((el) => {

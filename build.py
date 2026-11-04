@@ -87,6 +87,11 @@ PRODUCTS = {
         tagline="キーワードを入れるだけで、SEOを意識したブログ記事の下書きを作れるAIライティングツール",
         points=["GMOインターネットグループが提供", "キーワードから構成と本文の下書きを作成できる", "無料で試せるプランから始められる（内容は公式サイトで確認）"],
         article="ai-writing-tools"),
+    "domoai": dict(
+        name="DomoAI", color="coral", icon="video", badge="動画・画像生成AI",
+        tagline="画像や動画をもとに、AIで動画を作ったり、雰囲気を変えたりできる生成AIツール",
+        points=["画像や動画からAIで動画を生成・変換できる", "話す口の動きを音声に合わせるリップシンク機能がある", "初回購入で使えるクーポンあり（コード：7VVTQQZ5／月額プラン10%・年額プラン40%OFF）"],
+        article="online-video-editor"),
     "flexclip": dict(
         name="FlexClip", color="violet", icon="video", badge="無料で始められる動画編集",
         tagline="パソコンのブラウザだけで使える、オンラインの動画編集ツール",
