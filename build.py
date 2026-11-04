@@ -87,6 +87,11 @@ PRODUCTS = {
         tagline="キーワードを入れるだけで、SEOを意識したブログ記事の下書きを作れるAIライティングツール",
         points=["GMOインターネットグループが提供", "キーワードから構成と本文の下書きを作成できる", "無料で試せるプランから始められる（内容は公式サイトで確認）"],
         article="ai-writing-tools"),
+    "filmora": dict(
+        name="Filmora", color="sky", icon="video", badge="インストール型の動画編集ソフト",
+        tagline="パソコンにインストールして使う動画編集ソフト。エフェクトやテンプレートがそろっている",
+        points=["Windows・Macのパソコンで使える", "エフェクトや編集テンプレートが多く、見栄えを整えやすい", "購入前に無料で試せる（書き出しなどに制限がある場合あり）"],
+        article="online-video-editor"),
     "domoai": dict(
         name="DomoAI", color="coral", icon="video", badge="動画・画像生成AI",
         tagline="画像や動画をもとに、AIで動画を作ったり、雰囲気を変えたりできる生成AIツール",

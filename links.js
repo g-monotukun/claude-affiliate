@@ -38,6 +38,8 @@ const AFF_LINKS = {
   value_ai_writer_text: ``,
   domoai: `<a href="https://t.afi-b.com/visit.php?a=v16143A-8531425i&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/16143-1779861638-3.png" width="350" height="350" style="border:none;" alt="DomoAI リップシンク" /></a><img src="https://t.afi-b.com/lead/v16143A/y997255X/8531425i" width="1" height="1" style="border:none;" />`, // DomoAI（afb）※社名・商標でのリスティング出稿NG／クーポン 7VVTQQZ5（初回購入、月額10%・年額40%OFF）
   domoai_text: ``,
+  filmora: `<a href="https://t.afi-b.com/visit.php?a=A13462Z-A506837F&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/13462-1738089302-3.png" width="600" height="480" style="border:none;" alt="Filmora" /></a><img src="https://t.afi-b.com/lead/A13462Z/y997255X/A506837F" width="1" height="1" style="border:none;" />`, // Wondershare Filmora（afb）※社名・商品名・類似キーワードでのリスティング出稿NG
+  filmora_text: ``,
 };
 
 document.querySelectorAll("[data-aff]").forEach((el) => {
