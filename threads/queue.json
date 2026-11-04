@@ -744,5 +744,105 @@
       7,
       8
     ]
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "年末に実家の片づけを業者に頼むなら、予約は早めがおすすめです。\n\n年末は大掃除や引っ越しと重なって依頼が集中しやすく、希望の日が埋まってしまうことがあります。\n\n見積もりだけでも11月中に取っておくと安心です。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/cleanup-estimate.html",
+    "reply_text": "業者に頼む前に準備しておくことと、見積もりの比べ方はこちら",
+    "season": [
+      11,
+      12
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "冬の入浴で気をつけたいのが「ヒートショック」。\n\n暖かい部屋から寒い脱衣所や浴室に移ると、急な温度差で血圧が大きく変わります。\n\n入浴前に脱衣所と浴室を暖めておく、お湯はぬるめに。高齢の家族がいる家では特に気にかけたいポイントです。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省のときに、親の暮らしで確認しておきたいことをまとめています",
+    "season": [
+      11,
+      12,
+      1,
+      2
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "高齢者の転倒は、外よりも自宅の中で起きることが多いと言われています。\n\n・床に置いたままの物\n・電気コード\n・めくれやすい敷物\n・暗い廊下\n\n帰省したときに、親の家の足元を一度見てみてください。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省のときのチェックリストはこちら"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "遺品整理や実家の片づけを始める前に、まず探しておきたい物があります。\n\n通帳、印鑑、権利証、保険証券、年金手帳。\n\n業者に頼む場合も、大事な書類は先に家族で確保しておくのが安心です。",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/cleanup-estimate.html",
+    "reply_text": "片づけを業者に頼むときの準備と注意点をまとめています"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "仕事でAIを使う前に、ひとつ確認しておきたい設定があります。\n\n入力した内容がAIの学習に使われるかどうか。\n\nサービスによっては、設定で学習に使わないようにできます。会社のルールがあれば、そちらが最優先です。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
+    "reply_text": "AIツールを選ぶ前に確認したい5つのポイントはこちら"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "AIへの指示がうまくいかないときは、この4つを書き足してみてください。\n\n・役割（例：あなたは編集者です）\n・目的（何のための文章か）\n・条件（文字数、読む人）\n・出力の形（箇条書き、表など）\n\nそれだけで答えの精度がかなり変わります。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
+    "reply_text": "AIで記事を書くときの注意点もまとめています"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "パソコンの容量がすぐいっぱいになるなら、動画ファイルを疑ってみてください。\n\n書き出し前の素材や、同じ動画のコピーが残っていることがよくあります。\n\n書き出しが終わった動画の素材は、外付けのSSDやクラウドへ移すだけでもかなり空きます。",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
+    "reply_text": "ソフトを入れずにブラウザで編集できるツールの選び方はこちら"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "冬の肌荒れ、原因は乾燥かもしれません。\n\n洗顔のあとは、タオルで拭いたらすぐに保湿。\n時間がたつほど、肌の水分は逃げていきます。\n\nヒゲ剃りのあとも同じです。",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
+    "reply_text": "男性向けのスキンケアの基本と、受診の目安はこちら",
+    "season": [
+      11,
+      12,
+      1,
+      2
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "日焼け止めは夏だけのもの、と思っていませんか。\n\n紫外線は冬でもなくなるわけではありません。\n外にいる時間が長い日や、晴れた日のレジャーでは、冬でも日焼け止めを使うと安心です。",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
+    "reply_text": "男性の肌荒れのセルフケアをまとめています",
+    "season": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "ヒゲ脱毛を考えているなら、日焼けにも気をつけてください。\n\n脱毛の施術の前後は、日焼けを避けるよう案内されることが多いです。\n\n紫外線が弱い秋冬は、始めやすい時期と言われる理由のひとつです。",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/beard-removal-timing.html",
+    "reply_text": "ヒゲ脱毛を始める時期の考え方をまとめています",
+    "season": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ]
   }
 ]

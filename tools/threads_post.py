@@ -267,6 +267,12 @@ def due_reply(queue, now):
 
 # ---- メイン --------------------------------------------------------------------
 
+def with_utm(url, campaign):
+    """サイトのアクセス解析で、Threads のどの種類の投稿から来たかを分けられるように目印を付ける。"""
+    sep = "&" if "?" in url else "?"
+    return f"{url}{sep}utm_source=threads&utm_medium=social&utm_campaign={campaign}"
+
+
 def with_pr(text):
     """記事リンク（広告のあるページ）を付ける投稿には、PR 表記を入れる（ステマ規制・広告主の規約への対応）。"""
     return text if "#PR" in text or "【PR】" in text else f"{text}\n\n#PR"
@@ -292,7 +298,7 @@ def main():
     if reply_post is not None:
         params = {"media_type": "TEXT", "reply_to_id": latest_thread_id(reply_post),
                   "text": with_pr(reply_post.get("reply_text") or "まとめた記事はこちらです👇"),
-                  "link_attachment": reply_post["reply_link"]}
+                  "link_attachment": with_utm(reply_post["reply_link"], kind_of(reply_post))}
         if dry:
             print("[DRY RUN] 返信:", json.dumps(params, ensure_ascii=False))
         else:
@@ -341,7 +347,7 @@ def main():
     if post.get("link"):
         if not post["link"].startswith("https://"):
             sys.exit(f"link は https:// から始まる完全なURLで書いてください: {post['link']}")
-        params["link_attachment"] = post["link"]
+        params["link_attachment"] = with_utm(post["link"], "promo")
         params["text"] = with_pr(text)
         if len(params["text"]) > 500:
             sys.exit(f"PR表記を入れると500文字を超えます（{len(params['text'])}文字）: {text[:30]}…")
