@@ -54,6 +54,7 @@ ICONS = {
     "receipt": '<path d="M6 3.5h12v17l-2.5-1.5-2 1.5-1.5-1.5-1.5 1.5-2-1.5L6 20.5v-17Z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/>',
     "video": '<rect x="3.5" y="6" width="12.5" height="12" rx="2.5"/><path d="m16 10.5 4.5-2.5v8L16 13.5"/>',
     "wifi": '<path d="M3.5 9.5a12 12 0 0 1 17 0M6.5 12.5a7.5 7.5 0 0 1 11 0M9.5 15.5a3.2 3.2 0 0 1 5 0"/><path d="M12 19h.01"/>',
+    "mic": '<rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5v3M9 20.5h6"/>',
     "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     "pen": '<path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/>',
 }
@@ -87,6 +88,11 @@ PRODUCTS = {
         tagline="キーワードを入れるだけで、SEOを意識したブログ記事の下書きを作れるAIライティングツール",
         points=["GMOインターネットグループが提供", "キーワードから構成と本文の下書きを作成できる", "無料で試せるプランから始められる（内容は公式サイトで確認）"],
         article="ai-writing-tools"),
+    "comu": dict(
+        name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
+        tagline="録音から文字起こし・要約まで。会議や商談の記録を仕事に活かすAIボイスレコーダー",
+        points=["基本の文字起こし・要約は無料・回数無制限（高度なAI機能はプランによる制限あり）", "多言語の文字起こしと、話者ごとの整理に対応", "公式ストアでクーポンコード「comu」が使える"],
+        article="ai-voice-recorder"),
     "filmora": dict(
         name="Filmora", color="sky", icon="video", badge="インストール型の動画編集ソフト",
         tagline="パソコンにインストールして使う動画編集ソフト。エフェクトやテンプレートがそろっている",

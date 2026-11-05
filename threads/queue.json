@@ -880,5 +880,24 @@
     "kind": "promo",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
     "text": "動画編集ツール、オンラインで十分な人と、ソフトを入れたほうがいい人がいます。\n\n短い動画をたまに作るならブラウザのツールで足りることが多い。\n長い動画を細かく編集したい、エフェクトにこだわりたいなら、インストール型のソフトが向いています。\n\n選び分けの目安をまとめました。"
+  },
+  {
+    "site": "AIツール比較ラボ",
+    "kind": "promo",
+    "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-voice-recorder.html",
+    "text": "会議のあとの議事録、毎回30分かかっていませんか。\n\nAIボイスレコーダーなら、録音・文字起こし・要約までまとめて任せられます。\n\n選ぶときに一番差が出るのは「文字起こしの無料の範囲」。毎日使う人ほど、続けたときの費用が変わります。"
+  },
+  {
+    "site": "AIツール比較ラボ",
+    "kind": "promo",
+    "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-voice-recorder.html",
+    "text": "AIボイスレコーダーを使う前に、ひとつだけ守りたいマナー。\n\n録音する前に「記録のために録音してもいいですか」と相手に伝えること。\n\n社外の打ち合わせでは、録音やクラウド保存を禁止している会社もあります。"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-voice-recorder.html",
+    "reply_text": "AIボイスレコーダーの選び方と、録音のマナーをまとめています",
+    "text": "AIの文字起こしは便利ですが、そのまま議事録にするのは要注意。\n\n人の名前、会社名、数字は、聞き間違いで別の言葉になっていることがあります。\n\n大事な記録ほど、最後に人の目で確認を。"
   }
 ]
