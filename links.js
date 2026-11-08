@@ -1,7 +1,9 @@
 // 広告リンクの置き場所。ASPの管理画面でコピーしたリンクのHTMLを、キーごとに貼り付ける。
 // 空のままのキーは、記事上に何も表示されない（提携承認前でもページは壊れない）。
 const AFF_LINKS = {
-  dmm_ai_camp: ``, // DMM 生成AI CAMP（A8.net）
+  dmm_ai_camp: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEH59+86PL82+5VEK+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www29.a8.net/svt/bgt?aid=261015885495&wid=001&eno=01&mid=s00000027398001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BEH59+86PL82+5VEK+5YZ75" alt="">`, // DMM 生成AI CAMP 学び放題（A8.net）※正式名称で記載・略称不可／補助金の記載NG／「稼げる」等の断定・煽り表現NG
   xserver: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEH59+8C2HO2+CO4+6PRPD" rel="nofollow">
 <img border="0" width="250" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=261015885504&wid=001&eno=01&mid=s00000001642001128000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEH59+8C2HO2+CO4+6PRPD" alt="">`,     // エックスサーバー（A8.net）

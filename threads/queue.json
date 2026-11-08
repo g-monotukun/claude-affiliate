@@ -58,7 +58,7 @@
     "thread_id": "18038153243852175"
   },
   {
-    "text": "生成AIスクールを検討中の人へ。\n\n申し込む前に必ず確認したいのは\n・自分の職種に合うコースがあるか\n・補助金を含めた「実質いくら」か\n\n無料相談は申し込まなくてもOK。目的を伝えて、合うかどうかを確かめる場として使うのがおすすめです👇",
+    "text": "生成AIスクールを検討中の人へ。\n\n申し込む前に確認したいのは\n・自分の職種に合うコースがあるか\n・一括払いか月額制か\n・最低契約期間と解約の条件\n\n「仕事でどう使うか」まで学べるかを基準に選ぶと、ミスマッチを防げます👇",
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-school-checklist.html",
     "site": "AIツール比較ラボ",
     "posted_at": "2026-10-17T15:40:11+0000",
@@ -954,5 +954,11 @@
     "kind": "promo",
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/hair-treatment-types.html",
     "text": "薄毛の治療費、「月いくら」だけで比べていませんか。\n\n薬は続けるほど費用がかかり、植毛は1回の手術の費用が大きい。\n\n何年で総額いくらになるか、診察料や検査費用は別か。比べる前に整理しておきたいポイントです。"
+  },
+  {
+    "text": "ChatGPT、Copilot、Gemini、Claude。\n生成AIが増えすぎて、どれから覚えればいいか迷いませんか。\n\n職種別のコースとツール別のコースを横断して学べるのが「DMM 生成AI CAMP 学び放題」。\n月額制で、入会金・最低契約期間・追加料金はありません。\n\nスクールを選ぶときの確認ポイントはこちら👇",
+    "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-school-checklist.html",
+    "site": "AIツール比較ラボ",
+    "kind": "promo"
   }
 ]

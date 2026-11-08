@@ -129,9 +129,9 @@ PRODUCTS = {
         points=[".com や .net など定番のドメインを取得できる", "時期によってキャンペーン価格で取得できる", "GitHub Pagesのサイトにも独自ドメインを設定できる"],
         article="need-own-domain"),
     "dmm_ai_camp": dict(
-        name="DMM 生成AI CAMP", color="coral", icon="school", badge="生成AIスクール",
-        tagline="職種別のコースで、仕事に生かせる生成AIスキルを学べる",
-        points=["営業・マーケティングなど職種別にコースを用意", "受講前に無料カウンセリングで相談できる", "条件を満たすと補助金の対象になるコースもある"],
+        name="DMM 生成AI CAMP 学び放題", color="coral", icon="school", badge="生成AI学習サブスク",
+        tagline="職種別×ツール別のコースを、月額制で学び放題",
+        points=["営業・マーケティング・人事など職種別のコース", "ChatGPT・Gemini・Claudeなどツール別にも学べる", "入会金・最低契約期間・追加料金なし"],
         article="ai-school-checklist"),
 }
 
