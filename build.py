@@ -88,6 +88,11 @@ PRODUCTS = {
         tagline="キーワードを入れるだけで、SEOを意識したブログ記事の下書きを作れるAIライティングツール",
         points=["GMOインターネットグループが提供", "キーワードから構成と本文の下書きを作成できる", "無料で試せるプランから始められる（内容は公式サイトで確認）"],
         article="ai-writing-tools"),
+    "miricanvas": dict(
+        name="MiriCanvas", color="violet", icon="sparkle", badge="AIデザインツール",
+        tagline="資料・SNS投稿・チラシのデザインを作れるAIデザインツール",
+        points=["資料・SNS投稿・チラシなど、用途に合わせてデザインを作成", "AI機能を備えたデザインツール", "料金プランや使える機能は公式サイトで確認できる"],
+        article="how-to-choose-ai-tools"),
     "comu": dict(
         name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
         tagline="録音から文字起こし・要約まで。会議や商談の記録を仕事に活かすAIボイスレコーダー",
