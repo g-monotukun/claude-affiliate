@@ -52,7 +52,9 @@ const AFF_LINKS = {
   comu: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD78+G994FM+5YZG+5ZEMP" rel="nofollow">
 <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=261104084983&wid=001&eno=01&mid=s00000027862001005000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BGD78+G994FM+5YZG+5ZEMP" alt="">`, // Comu AIボイスレコーダー（A8.net）クーポン comu
-  miricanvas: ``, // MiriCanvas（A8.net）※テキストリンクのみ
+  miricanvas: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD79+CI4HE+5EX8+5ZEMP" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=261104085021&wid=001&eno=01&mid=s00000025262001005000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4BGD79+CI4HE+5EX8+5ZEMP" alt="">`, // MiriCanvas（A8.net）
   miricanvas_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD79+CI4HE+5EX8+5YRHE" rel="nofollow">MiriCanvasでデザインを始める</a>
 <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BGD79+CI4HE+5EX8+5YRHE" alt="">`,
   comu_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD78+G994FM+5YZG+5YRHE" rel="nofollow">【Comu】</a>

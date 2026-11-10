@@ -90,8 +90,8 @@ PRODUCTS = {
         article="ai-writing-tools"),
     "miricanvas": dict(
         name="MiriCanvas", color="violet", icon="sparkle", badge="AIデザインツール",
-        tagline="資料・SNS投稿・チラシのデザインを作れるAIデザインツール",
-        points=["資料・SNS投稿・チラシなど、用途に合わせてデザインを作成", "AI機能を備えたデザインツール", "料金プランや使える機能は公式サイトで確認できる"],
+        tagline="テンプレートとAI機能で、資料・SNS投稿・チラシをひとつのツールで作れる",
+        points=["基本無料で使える（Proプランは月額980円・税込）", "テーマを入れるとスライドを作るAIプレゼンテーション機能", "PDF・PNG・PPTXなどで書き出せて、パワポで再編集もできる"],
         article="how-to-choose-ai-tools"),
     "comu": dict(
         name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
