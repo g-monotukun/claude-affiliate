@@ -991,5 +991,104 @@
     "link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
     "site": "AIツール比較ラボ",
     "kind": "promo"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "Claude Codeでゲーム作ろうとして途中でやめたことあるんだけど\n原因AIじゃなくて完全に自分で、最初から理想詰め込みすぎてた\n今やるなら、まず1画面動かすところからやると思う",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/build-site-with-claude-code.html",
+    "reply_text": "Claude Codeでサイト作ったときの流れはここにまとめてるよ"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "AIで動画編集するようになってからパソコンの容量ずっとギリギリ\n書き出したファイルってなんか消せないんだよね\nみんなどこに保存してるの？"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "ChatGPTとClaude Code両方使ってるけど、サイトもゲームも動画もAIなかったら手出してなかったと思う\nみんな一番使ってるAIってなに？"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "生成AI触ってはみたけど、仕事でどう使えばいいか分からないまま止まってる人けっこういると思う\nツールの使い方より先に、自分の仕事だと何に使えるのかを知ったほうが早いよ",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-school-checklist.html",
+    "reply_text": "AIを学べるスクールを選ぶときに見ておきたいところ、まとめてます"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "SNSの告知画像って毎回なんとなくで作ってない？\nテンプレートから作れるツール使うだけで、迷ってる時間かなり減るよ",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
+    "reply_text": "AIツール選ぶときに確認しておきたいことはこっち"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "20代のころから薄毛が気になってて、外出るときは帽子ないと無理だった\n一番こたえたのは友達に言われたときかな、悪気ないのは分かってるんだけどね\n同じような経験ある人いる？"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "最近体毛濃くなってきた気がして地味に気になってる\n腕とかすねとか、長袖の季節でもふとしたときに目に入るんだよな",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/clinic-vs-salon.html",
+    "reply_text": "脱毛するならクリニックかサロンか、違いをまとめてます"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "AGAのクリニック気になってるけど行けてない人、最初は相談だけでもいいとこ多いよ\n合わなかったらそこでやめればいいし",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/aga-online-basics.html",
+    "reply_text": "AGAの相談先の選び方はここにまとめてます"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "season": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "text": "冬のヒゲ剃りってヒリヒリしない？\n剃る前にぬるま湯で顔あっためて、剃ったらすぐ保湿するだけでも朝ちょっと楽になるよ"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "祖父母の家にちょこちょこ掃除しに行ってるんだけど、エアコンの中だけは業者に頼んだ\n高いとこの作業は無理しないほうがいいなって"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "離れて住んでる親に「困ってることない？」って聞いても、だいたい「大丈夫」で終わるってよく聞く\n本当に大丈夫かは、冷蔵庫とか郵便受け見たほうが分かったりするんだよね",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省したときに見ておきたいところ、チェックリストにしてます"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "season": [
+      11,
+      12,
+      1
+    ],
+    "text": "年末実家帰るなら、冷蔵庫の賞味期限と郵便受けと薬の置き場所はちょっと見といたほうがいいかも\n話しにくいことも、物見ながらだと切り出しやすいよ",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "ほかに見ておきたいところはこっちにまとめてます"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "実家の片づけ、何回か始めては止まってる家けっこうあると思う\n物が多すぎると、どこから手つけるか決めるだけで疲れちゃうんだよね",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/cleanup-estimate.html",
+    "reply_text": "業者に頼むときの見積もりの取り方と注意点はこっち"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "親の家の人形とか写真、捨てられなくてまた押し入れに戻したことない？\nごみで出すのに抵抗ある物は、供養してもらう方法もあるよ",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/hard-to-discard.html",
+    "reply_text": "捨てにくい物の供養のしかたはここにまとめてます"
   }
 ]
