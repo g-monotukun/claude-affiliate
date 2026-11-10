@@ -1090,5 +1090,18 @@
     "text": "親の家の人形とか写真、捨てられなくてまた押し入れに戻したことない？\nごみで出すのに抵抗ある物は、供養してもらう方法もあるよ",
     "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/hard-to-discard.html",
     "reply_text": "捨てにくい物の供養のしかたはここにまとめてます"
+  },
+  {
+    "text": "企画書とか報告書のスライド、中身は頭にあるのに形にするのに時間かかるんだよね\n最近はテーマ入れたり手元のExcelとかPDF読み込ませたりすると、構成からデザインまでたたき台作ってくれるツールもある\n白紙から作るより、整えるほうに時間使えるのが大きいと思う",
+    "link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-presentation.html",
+    "site": "AIツール比較ラボ",
+    "kind": "promo"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "AIでスライド作るなら、結論の1枚だけは自分で書いたほうがいいよ\n見た目はAIがきれいにしてくれるけど、結局何を決めてほしいのかは自分にしか分からないからね\nあと数字と会社名は、元の資料と照らし合わせてから出そう",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-presentation.html",
+    "reply_text": "AIでプレゼン資料作るときのコツと注意点はこっち"
   }
 ]

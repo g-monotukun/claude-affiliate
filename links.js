@@ -57,6 +57,11 @@ const AFF_LINKS = {
 <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4BGD79+CI4HE+5EX8+5ZEMP" alt="">`, // MiriCanvas（A8.net）
   miricanvas_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD79+CI4HE+5EX8+5YRHE" rel="nofollow">MiriCanvasでデザインを始める</a>
 <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BGD79+CI4HE+5EX8+5YRHE" alt="">`,
+  miricanvas_slide: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD79+23M2LU+5EX8+BZ0Z5" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=261104085127&wid=001&eno=01&mid=s00000025262002011000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BGD79+23M2LU+5EX8+BZ0Z5" alt="">`, // MiriCanvas AIプレゼンテーション（A8.net）
+  miricanvas_slide_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD79+23M2LU+5EX8+BXB8Y" rel="nofollow">ビジネス特化AIスライド【MiriCanvas】</a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4BGD79+23M2LU+5EX8+BXB8Y" alt="">`,
   comu_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD78+G994FM+5YZG+5YRHE" rel="nofollow">【Comu】</a>
 <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4BGD78+G994FM+5YZG+5YRHE" alt="">`,
 };

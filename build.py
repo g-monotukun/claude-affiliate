@@ -93,6 +93,11 @@ PRODUCTS = {
         tagline="テンプレートとAI機能で、資料・SNS投稿・チラシをひとつのツールで作れる",
         points=["基本無料で使える（Proプランは月額980円・税込）", "テーマを入れるとスライドを作るAIプレゼンテーション機能", "PDF・PNG・PPTXなどで書き出せて、パワポで再編集もできる"],
         article="how-to-choose-ai-tools"),
+    "miricanvas_slide": dict(
+        name="MiriCanvas AIプレゼンテーション", color="violet", icon="sparkle", badge="AIスライド作成",
+        tagline="テーマの入力や資料のアップロードから、構成とデザインのたたき台を作れる",
+        points=["Excel・PDF・PPTXを読み込んで、内容をもとにスライドを作成", "デザイナーが作ったテンプレートをもとに組み立てる", "基本無料（Proは月額980円・税込）、PPTXで書き出して再編集できる"],
+        article="ai-presentation"),
     "comu": dict(
         name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
         tagline="録音から文字起こし・要約まで。会議や商談の記録を仕事に活かすAIボイスレコーダー",
