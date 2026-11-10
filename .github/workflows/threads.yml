@@ -23,7 +23,11 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
+      # 同時に起動した回は concurrency で順番待ちになる。そのとき起動時点の古いコミットを使うと
+      # 直前の回の投稿記録が見えず二重投稿になるため、必ず main の最新を取り出す
       - uses: actions/checkout@v5
+        with:
+          ref: main
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
