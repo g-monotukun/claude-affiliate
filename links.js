@@ -29,19 +29,19 @@ const AFF_LINKS = {
   mf_business: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEHX8+64AELU+3SPO+C8MP3M" rel="nofollow">個人事業主にとって必要な機能が搭載！【マネーフォワード クラウド】</a>
 <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4BEHX8+64AELU+3SPO+C8MP3M" alt="">`, // マネーフォワード クラウド 個人事業主向け（A8.net・テキスト）
   jetboy: `<a href="https://t.afi-b.com/visit.php?a=F11620Q-f3887103&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/11620-1587337083-3.jpg" width="468" height="60" style="border:none;" alt="JETBOY" /></a><img src="https://t.afi-b.com/lead/F11620Q/y997255X/f3887103" width="1" height="1" style="border:none;" />`, // JETBOY（afb）※社名・商標でのリスティング出稿NG
-  jetboy_text: ``,
+  jetboy_text: `<a href="https://t.afi-b.com/visit.php?a=F11620Q-V387596Z&p=y997255X" rel="nofollow">JETBOYのプランを見る</a><img src="https://t.afi-b.com/lead/F11620Q/y997255X/V387596Z" width="1" height="1" style="border:none;" />`,
   flexclip: `<a href="https://t.afi-b.com/visit.php?a=6144096-6473112o&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/14409-1679897742-3.png" width="728" height="90" style="border:none;" alt="FlexClip" /></a><img src="https://t.afi-b.com/lead/6144096/y997255X/6473112o" width="1" height="1" style="border:none;" />`, // FlexClip（afb）※PCでの成果のみ。社名・商標でのリスティング出稿NG
-  flexclip_text: ``,
+  flexclip_text: `<a href="https://t.afi-b.com/visit.php?a=6144096-K473105P&p=y997255X" rel="nofollow">FlexClipを公式サイトで見る</a><img src="https://t.afi-b.com/lead/6144096/y997255X/K473105P" width="1" height="1" style="border:none;" />`,
   airwifi: `<a href="https://t.afi-b.com/visit.php?a=O12638e-R4227311&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/12638-1620613199-3.png" width="320" height="50" style="border:none;" alt="AiR-Wi-Fi" /></a><img src="https://t.afi-b.com/lead/O12638e/y997255X/R4227311" width="1" height="1" style="border:none;" />`, // AiR-Wi-Fi（afb）※社名・商標でのリスティング出稿NG
-  airwifi_text: ``,
+  airwifi_text: `<a href="https://t.afi-b.com/visit.php?a=O12638e-r422619S&p=y997255X" rel="nofollow">AiR-Wi-Fiの料金プランを見る</a><img src="https://t.afi-b.com/lead/O12638e/y997255X/r422619S" width="1" height="1" style="border:none;" />`,
   value_ai_writer: `<a href="https://px.a8.net/svt/ejp?a8mat=4BEL1L+5GH2EQ+1JUK+1HMIGH" rel="nofollow">
 <img border="0" width="350" height="240" alt="" src="https://www22.a8.net/svt/bgt?aid=261020937330&wid=001&eno=01&mid=s00000007238009007000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEL1L+5GH2EQ+1JUK+1HMIGH" alt="">`, // Value AI Writer byGMO（A8.net）
   value_ai_writer_text: ``,
   domoai: `<a href="https://t.afi-b.com/visit.php?a=v16143A-8531425i&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/16143-1779861638-3.png" width="350" height="350" style="border:none;" alt="DomoAI リップシンク" /></a><img src="https://t.afi-b.com/lead/v16143A/y997255X/8531425i" width="1" height="1" style="border:none;" />`, // DomoAI（afb）※社名・商標でのリスティング出稿NG／クーポン 7VVTQQZ5（初回購入、月額10%・年額40%OFF）
-  domoai_text: ``,
+  domoai_text: `<a href="https://t.afi-b.com/visit.php?a=v16143A-G520373D&p=y997255X" rel="nofollow">DomoAIを公式サイトで見る</a><img src="https://t.afi-b.com/lead/v16143A/y997255X/G520373D" width="1" height="1" style="border:none;" />`,
   filmora: `<a href="https://t.afi-b.com/visit.php?a=A13462Z-A506837F&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/13462-1738089302-3.png" width="600" height="480" style="border:none;" alt="Filmora" /></a><img src="https://t.afi-b.com/lead/A13462Z/y997255X/A506837F" width="1" height="1" style="border:none;" />`, // Wondershare Filmora（afb）※社名・商品名・類似キーワードでのリスティング出稿NG
-  filmora_text: ``,
+  filmora_text: `<a href="https://t.afi-b.com/visit.php?a=A13462Z-m453579p&p=y997255X" rel="nofollow">Filmoraの公式ストアを見る</a><img src="https://t.afi-b.com/lead/A13462Z/y997255X/m453579p" width="1" height="1" style="border:none;" />`,
   comu: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD78+G994FM+5YZG+5ZEMP" rel="nofollow">
 <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=261104084983&wid=001&eno=01&mid=s00000027862001005000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BGD78+G994FM+5YZG+5ZEMP" alt="">`, // Comu AIボイスレコーダー（A8.net）クーポン comu
