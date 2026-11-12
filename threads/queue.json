@@ -878,7 +878,9 @@
     "theme": "ai",
     "text": "AIへの指示がうまくいかないときは、4つ書き足してみるといいよ\n役割（あなたは編集者です、みたいな）と、何のための文章かと、文字数とか読む人の条件と、箇条書きとか表とかの出力の形\nこれだけで返ってくる答えけっこう変わる",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
-    "reply_text": "AIで記事書くときの注意点もまとめてるよ"
+    "reply_text": "AIで記事書くときの注意点もまとめてるよ",
+    "posted_at": "2026-11-12T22:16:19+0000",
+    "thread_id": "18116073053598653"
   },
   {
     "kind": "tip",
