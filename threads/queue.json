@@ -1198,5 +1198,142 @@
     "link": "https://g-monotukun.github.io/parents-consultation/articles/cleanup-estimate.html",
     "site": "親と実家の相談室",
     "kind": "promo"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "AIに頼んでみたけど、結局自分でやり直したことってある？\n自分はゲーム作ろうとして、最初に理想を盛りすぎて止まったことある\nみんなの「AIでうまくいかなかった話」聞いてみたい"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "仕事でAI使ってる人、一番時間が浮いたのってどの作業？\n文章？資料づくり？議事録？"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "ChatGPTとかClaudeに課金してる？\n無料のままで足りてる人も多い気がするけど、どこで有料にしようって決めた？"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "外に出るとき、帽子がないと落ち着かない人いる？\n自分は薄毛が気になってから、ずっとそうだった"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "男で肌のケアしてる人って、何から始めた？\n洗顔だけ？化粧水まで？"
+  },
+  {
+    "kind": "question",
+    "theme": "mens",
+    "text": "脱毛するならヒゲ派？腕とかすね派？\n秋冬に始める人が多いって聞くけど、実際どうなんだろ"
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "実家に帰ったとき、親に「困ってることない？」って聞く？\n聞いても「大丈夫」で終わること多くない？"
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "親とお金とか介護の話、もうした？\nしてない人のほうが多いと思うけど、話せた人はきっかけ何だった？"
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "実家に物が多すぎて片づけたいけど、親が捨てさせてくれないって人いる？\nどうやって話した？"
+  },
+  {
+    "kind": "question",
+    "theme": "parents",
+    "text": "年末年始、実家に帰る予定ある？\n帰ったらこれだけはやっておきたいってことある？",
+    "season": [
+      11,
+      12,
+      1
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "AIに何か頼むとき「誰に向けて」を一言足すだけで、返ってくる文章けっこう変わるよ\n例えば「60代の親に説明する感じで」とか",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
+    "reply_text": "AIで文章を作るときのコツと注意点はこっち"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "ChatGPTとかに会社の資料をそのまま貼るのはちょっと待って\n名前とか金額とか、外に出しちゃいけない情報が入ってないか先に見たほうがいい",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
+    "reply_text": "AIツールを選ぶときに確認したいことはここにまとめてる"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "AIに長い文章を頼むときは、いきなり全部じゃなくて「まず見出しだけ出して」って頼むと直しやすいよ\n骨組みを決めてから中身を書かせると、ずれが少ない",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
+    "reply_text": "AIで記事を書くときの注意点はこっち"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "ヒゲ剃りのヒリヒリ、刃が古いのが原因のこともあるよ\n切れ味が落ちた刃だと何回も往復させちゃうから、肌の負担が増えるんだよね",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
+    "reply_text": "ヒゲ剃り後の肌トラブルの対策はここにまとめてる"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "冬の乾燥で顔がつっぱるなら、洗顔のお湯の温度を下げてみて\n熱いお湯は肌のうるおいまで落としやすいから、ぬるいくらいがちょうどいい",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/mens-skin-trouble.html",
+    "reply_text": "男の肌荒れのセルフケアはこっち",
+    "season": [
+      11,
+      12,
+      1,
+      2
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "AGAの相談先を探すときは、月額だけじゃなくて診察料と解約の条件まで見ておくといいよ\n続けるほど差が出るところだから",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/aga-online-basics.html",
+    "reply_text": "AGAの相談先の選び方はここにまとめてる"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "冬に実家へ帰ったら、親の寝室から廊下、トイレまでの明かりを見てみて\n夜中に暗いとつまずきやすいんだよね\n足元灯を一つ置くだけでも違う",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省したときに見ておきたいところはこっち",
+    "season": [
+      11,
+      12,
+      1,
+      2
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "出張買取で売ったあとでも、原則8日間はクーリング・オフできるって知ってた？\n書面を受け取った日から数えるから、書面は捨てずに取っておこう",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/antique-appraisal.html",
+    "reply_text": "出張買取を頼む前に知っておきたいことはここにまとめてる"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "親の家の片づけは、いきなり捨てる話から入らないほうがうまくいくよ\n「最近使ってない物ってある？」って聞くところから始めると、親も構えにくい",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/cleanup-estimate.html",
+    "reply_text": "片づけを業者に頼むときの準備と注意点はこっち"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "老人ホームを探すなら、資料請求は1つに絞らず何か所かまとめて取るといいよ\n費用も雰囲気も、並べて見ないと違いが分からないんだよね",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/nursing-home-search.html",
+    "reply_text": "老人ホームの探し方はここにまとめてる"
   }
 ]
