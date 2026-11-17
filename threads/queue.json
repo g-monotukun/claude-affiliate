@@ -1156,5 +1156,41 @@
     "text": "AIでスライド作るなら、結論の1枚だけは自分で書いたほうがいいよ\n見た目はAIがきれいにしてくれるけど、結局何を決めてほしいのかは自分にしか分からないからね\nあと数字と会社名は、元の資料と照らし合わせてから出そう",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-presentation.html",
     "reply_text": "AIでプレゼン資料作るときのコツと注意点はこっち"
+  },
+  {
+    "text": "離れて住んでる親、電話だと「大丈夫」って言うけど、本当に大丈夫かは分からないんだよね\n最近はカメラじゃなくて、生活の動きだけをスマホに知らせてくれる見守りサービスもある\n見られてる感じがしにくいから、カメラは嫌がる親でも話しやすいと思う",
+    "link": "https://g-monotukun.github.io/parents-consultation/articles/remote-watch-service.html",
+    "site": "親と実家の相談室",
+    "kind": "promo",
+    "season": [
+      11,
+      12,
+      1
+    ]
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "親に見守りサービスを提案するなら「監視」じゃなくて「何かあったときにすぐ気づけるように」って伝えたほうがいいよ\nあと勝手に決めないで、カメラは嫌とか操作は苦手とか、先に親の気持ちを聞いておくと話がこじれにくい",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/remote-watch-service.html",
+    "reply_text": "見守りサービスの種類と選び方はここにまとめてます"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "text": "親のことで迷ったら、親が住んでる地域の地域包括支援センターに相談できるよ\n介護とか暮らしのことの総合窓口で、相談は無料\n離れて住んでる子どもからの相談にも乗ってくれる",
+    "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
+    "reply_text": "帰省のときに見ておきたいことはこっちにまとめてる"
+  },
+  {
+    "kind": "tip",
+    "theme": "parents",
+    "season": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "text": "冬は実家のお風呂場と脱衣所の寒さ、ちょっと気にしてみて\n暖かい部屋から急に寒いところに行くと体に負担がかかりやすいんだよね\n帰省したときに小さいヒーターを置いておくだけでも違うと思う"
   }
 ]
