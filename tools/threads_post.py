@@ -26,10 +26,16 @@ promo の選び方:
 tip・question の選び方:
   THEME_WEIGHTS の月ごとの重みでテーマを選び、そのテーマの未投稿から season が合うものを優先する。
   なければ別のテーマ、それもなければ RECYCLE_DAYS 日以上たったものを再投稿する。
+リンクの置き場所（2026-11-17〜）:
+  promo も本文にはリンクを付けず、投稿した直後に自分の投稿へ返信して記事リンク（#PR付き）を付ける。
+  本文にリンクがあると宣伝っぽく見えて読まれにくいため。返信に失敗したら、次の起動で付け直す。
+  本文に商品・サービス名（BRAND_WORDS）が入る投稿は、本文にも「#PR」を入れる（ステマ規制への対応）。
 PR表記:
-  記事リンクを付ける投稿（promo と、記事リンクの返信）には、本文の最後に「#PR」を自動で入れる。
+  記事リンクを付ける返信には、本文の最後に「#PR」を自動で入れる。
 返信:
-  reply_link のある投稿は、投稿から REPLY_AFTER_MIN 分以上たった次の起動で、自分の投稿に返信して記事リンクを付ける。
+  reply_link のある tip・question は、投稿から REPLY_AFTER_MIN 分以上たった次の起動で、自分の投稿に返信して記事リンクを付ける。
+トピックタグ:
+  テーマごとに TOPIC_TAGS のタグを1つ付ける。API がタグを受け付けなかったら、タグなしで投稿し直す。
 
 必要な環境変数（GitHub の Secrets に登録）:
   THREADS_ACCESS_TOKEN  threads_content_publish 権限付きの長期アクセストークン
@@ -56,6 +62,17 @@ RECYCLE_DAYS = 30
 REPLY_AFTER_MIN = 40
 LOW_STOCK = {"promo": 3, "tip": 3, "question": 3}
 INVALID_LINK_ATTACHMENT = 4279047
+PROMO_REPLY_TEXT = "詳しくはここにまとめてます"
+
+# 投稿に1つだけ付けられるトピックタグ（テーマごと）
+TOPIC_TAGS = {"ai": "生成AI", "mens": "メンズ美容", "parents": "実家"}
+SITE_THEMES = {"claude-affiliate": "ai", "mens-care-lab": "mens", "parents-consultation": "parents"}
+
+# 本文にこれらの名前が入る投稿は、本文にも #PR を入れる（特定の商品・サービスの宣伝になるため）
+BRAND_WORDS = ["DMM", "MiriCanvas", "「ちかく」", "クオーレ", "七福神", "ぽいみつ", "ウリエル", "みんなのお焚き上げ",
+               "freee", "マネーフォワード", "Comu", "Filmora", "FlexClip", "DomoAI", "JETBOY", "AiR-Wi-Fi",
+               "エックスサーバー", "ConoHa", "お名前.com", "Value AI Writer", "湘南美容", "SBC", "ゴリラ",
+               "BIDAN", "銀座総合", "銀クリ"]
 
 # 月ごとのテーマの重み（ai, mens, parents）
 THEME_WEIGHTS = {
@@ -93,7 +110,18 @@ def publish(user, params, token):
 
 
 def publish_with_fallback(user, params, token):
-    """リンクカードを付けられなかったら、URL を本文に入れて投稿し直す。"""
+    """トピックタグを受け付けなかったらタグなしで、リンクカードを付けられなかったら URL を本文に入れて投稿し直す。"""
+    try:
+        return publish_link_fallback(user, params, token)
+    except ThreadsError as e:
+        if "topic_tag" not in params:
+            raise
+        print(f"トピックタグ付きで投稿できなかったため、タグなしで投稿し直します: {e}")
+        params = {k: v for k, v in params.items() if k != "topic_tag"}
+        return publish_link_fallback(user, params, token)
+
+
+def publish_link_fallback(user, params, token):
     try:
         return publish(user, params, token)
     except ThreadsError as e:
@@ -245,6 +273,28 @@ def report_stock(kind, remaining):
 
 # ---- 返信（記事リンク） -----------------------------------------------------------
 
+def theme_of(post):
+    if post.get("theme"):
+        return post["theme"]
+    for site, theme in SITE_THEMES.items():
+        if f"/{site}/" in (post.get("link") or post.get("reply_link") or ""):
+            return theme
+    return None
+
+
+def has_brand(text):
+    return any(w in text for w in BRAND_WORDS)
+
+
+def reply_target(post):
+    """返信で付ける記事URL。promo は本文にリンクを付けない形で投稿したもの（link_in_reply）だけ。"""
+    if post.get("reply_link"):
+        return post["reply_link"]
+    if post.get("link_in_reply") and post.get("link"):
+        return post["link"]
+    return None
+
+
 def latest_thread_id(post):
     ids = [post.get("thread_id")] + post.get("reposted_ids", [])
     return [i for i in ids if i][-1] if any(ids) else None
@@ -254,7 +304,7 @@ def due_reply(queue, now):
     """投稿から REPLY_AFTER_MIN 分以上たち、まだ返信していない reply_link 付きの投稿。"""
     for p in queue:
         times = posted_times(p)
-        if not p.get("reply_link") or not times:
+        if not reply_target(p) or not times:
             continue
         last = max(times)
         replied = [datetime.datetime.strptime(s, "%Y-%m-%dT%H:%M:%S%z") for s in p.get("replied_at", [])]
@@ -286,6 +336,23 @@ def save(queue):
     QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def send_link_reply(queue, post, user, token, dry):
+    """自分の投稿に返信して、記事リンク（#PR付き）を付ける。"""
+    params = {"media_type": "TEXT", "reply_to_id": latest_thread_id(post),
+              "text": with_pr(post.get("reply_text") or PROMO_REPLY_TEXT),
+              "link_attachment": with_utm(reply_target(post), kind_of(post))}
+    if dry:
+        print("[DRY RUN] 返信:", json.dumps(params, ensure_ascii=False))
+        return
+    try:
+        publish_with_fallback(user, params, token)
+        post.setdefault("replied_at", []).append(stamp())
+        save(queue)
+        print(f"返信で記事リンクを付けました: {reply_target(post)}")
+    except ThreadsError as e:
+        print(f"返信に失敗しました（次の起動で付け直します）: {e}")
+
+
 def main():
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
     now = datetime.datetime.now(JST)
@@ -296,19 +363,7 @@ def main():
     # 1. 返信の時間になった投稿があれば、記事リンクを返信で付ける（1回の起動で1件）
     reply_post = due_reply(queue, now)
     if reply_post is not None:
-        params = {"media_type": "TEXT", "reply_to_id": latest_thread_id(reply_post),
-                  "text": with_pr(reply_post.get("reply_text") or "まとめた記事はこちらです👇"),
-                  "link_attachment": with_utm(reply_post["reply_link"], kind_of(reply_post))}
-        if dry:
-            print("[DRY RUN] 返信:", json.dumps(params, ensure_ascii=False))
-        else:
-            try:
-                publish_with_fallback(user, params, token)
-                reply_post.setdefault("replied_at", []).append(stamp())
-                save(queue)
-                print(f"返信で記事リンクを付けました: {reply_post['reply_link']}")
-            except ThreadsError as e:
-                print(f"返信に失敗しました（投稿は続けます）: {e}")
+        send_link_reply(queue, reply_post, user, token, dry)
 
     # 2. 時間帯の確認
     if os.environ.get("FORCE") == "1":
@@ -344,11 +399,15 @@ def main():
     if len(text) > 500:
         sys.exit(f"500文字を超えています（{len(text)}文字）: {text[:30]}…")
     params = {"media_type": "TEXT", "text": text}
+    tag = TOPIC_TAGS.get(theme_of(post))
+    if tag:
+        params["topic_tag"] = tag
     if post.get("link"):
         if not post["link"].startswith("https://"):
             sys.exit(f"link は https:// から始まる完全なURLで書いてください: {post['link']}")
-        params["link_attachment"] = with_utm(post["link"], "promo")
-        params["text"] = with_pr(text)
+        # リンクは本文ではなく、投稿直後の返信で付ける
+        if has_brand(text):
+            params["text"] = with_pr(text)
         if len(params["text"]) > 500:
             sys.exit(f"PR表記を入れると500文字を超えます（{len(params['text'])}文字）: {text[:30]}…")
 
@@ -367,8 +426,15 @@ def main():
     else:
         post["posted_at"] = stamp()
         post["thread_id"] = result.get("id")
+    if post.get("link"):
+        post["link_in_reply"] = True
     save(queue)
     print(f"投稿しました: {result.get('id')}")
+
+    # promo は投稿の直後に、返信で記事リンクを付ける
+    if post.get("link"):
+        time.sleep(5)
+        send_link_reply(queue, post, user, token, dry)
 
 
 if __name__ == "__main__":
