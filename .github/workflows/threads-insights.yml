@@ -1,0 +1,34 @@
+name: Threads 反応の集計
+
+on:
+  schedule:
+    # 毎週月曜 10:23（日本時間）ごろ
+    - cron: "23 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: threads-post
+
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: 集計
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: python3 tools/threads_insights.py
+      - name: 保存
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add threads/insights.json threads/insights.md
+          git diff --cached --quiet || (git commit -m "Update Threads insights" && git pull --rebase && git push)
