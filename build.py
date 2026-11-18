@@ -56,6 +56,7 @@ ICONS = {
     "wifi": '<path d="M3.5 9.5a12 12 0 0 1 17 0M6.5 12.5a7.5 7.5 0 0 1 11 0M9.5 15.5a3.2 3.2 0 0 1 5 0"/><path d="M12 19h.01"/>',
     "mic": '<rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5v3M9 20.5h6"/>',
     "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+    "phone": '<rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 17.5h2"/>',
     "pen": '<path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/>',
 }
 
@@ -103,6 +104,11 @@ PRODUCTS = {
         tagline="誤字脱字や敬語、読みやすさをチェックして、文章表現も提案してくれるクラウドツール",
         points=["誤字脱字・誤った敬語・差別語や不快語をチェック", "読みやすさのチェックと文章表現の提案", "送信した文章はクラウド上に保存されないとされている"],
         article="ai-writing-tools"),
+    "socialdog": dict(
+        name="SocialDog", color="sky", icon="phone", badge="SNS管理ツール",
+        tagline="X・Instagram・Threadsなど複数のSNSを、ひとつの画面でまとめて管理できる国産ツール",
+        points=["無料のFreeプランでも、SNSごとに常に10件まで予約投稿できる", "フォロワーの増減や反応のないアカウントを一覧で管理", "有料プランは7日間の無料トライアルあり"],
+        article="sns-management-tool"),
     "comu": dict(
         name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
         tagline="録音から文字起こし・要約まで。会議や商談の記録を仕事に活かすAIボイスレコーダー",
