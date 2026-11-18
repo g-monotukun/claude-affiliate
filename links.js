@@ -49,6 +49,11 @@ const AFF_LINKS = {
   domoai_text: `<a href="https://t.afi-b.com/visit.php?a=v16143A-G520373D&p=y997255X" rel="nofollow">DomoAIを公式サイトで見る</a><img src="https://t.afi-b.com/lead/v16143A/y997255X/G520373D" width="1" height="1" style="border:none;" />`,
   filmora: `<a href="https://t.afi-b.com/visit.php?a=A13462Z-A506837F&p=y997255X" rel="nofollow"><img src="https://www.afi-b.com/upload_image/13462-1738089302-3.png" width="600" height="480" style="border:none;" alt="Filmora" /></a><img src="https://t.afi-b.com/lead/A13462Z/y997255X/A506837F" width="1" height="1" style="border:none;" />`, // Wondershare Filmora（afb）※社名・商品名・類似キーワードでのリスティング出稿NG
   filmora_text: `<a href="https://t.afi-b.com/visit.php?a=A13462Z-m453579p&p=y997255X" rel="nofollow">Filmoraの公式ストアを見る</a><img src="https://t.afi-b.com/lead/A13462Z/y997255X/m453579p" width="1" height="1" style="border:none;" />`,
+  bunken: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+FM17UA+3Q2O+HXKQP" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=261118243944&wid=001&eno=01&mid=s00000017376003012000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4BGO4J+FM17UA+3Q2O+HXKQP" alt="">`, // 文賢（A8.net）
+  bunken_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+FM17UA+3Q2O+HVFKY" rel="nofollow">文章作成アドバイスツール【文賢】</a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BGO4J+FM17UA+3Q2O+HVFKY" alt="">`,
   comu: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD78+G994FM+5YZG+5ZEMP" rel="nofollow">
 <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=261104084983&wid=001&eno=01&mid=s00000027862001005000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BGD78+G994FM+5YZG+5ZEMP" alt="">`, // Comu AIボイスレコーダー（A8.net）クーポン comu

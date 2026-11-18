@@ -98,6 +98,11 @@ PRODUCTS = {
         tagline="テーマの入力や資料のアップロードから、構成とデザインのたたき台を作れる",
         points=["Excel・PDF・PPTXを読み込んで、内容をもとにスライドを作成", "デザイナーが作ったテンプレートをもとに組み立てる", "基本無料（Proは月額980円・税込）、PPTXで書き出して再編集できる"],
         article="ai-presentation"),
+    "bunken": dict(
+        name="文賢（ブンケン）", color="violet", icon="pen", badge="文章の校正・推敲支援",
+        tagline="誤字脱字や敬語、読みやすさをチェックして、文章表現も提案してくれるクラウドツール",
+        points=["誤字脱字・誤った敬語・差別語や不快語をチェック", "読みやすさのチェックと文章表現の提案", "送信した文章はクラウド上に保存されないとされている"],
+        article="ai-writing-tools"),
     "comu": dict(
         name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
         tagline="録音から文字起こし・要約まで。会議や商談の記録を仕事に活かすAIボイスレコーダー",
