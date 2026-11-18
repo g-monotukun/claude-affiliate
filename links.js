@@ -59,6 +59,11 @@ const AFF_LINKS = {
 <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4BGO4J+FW5L4I+3VAG+609HT" alt="">`, // SocialDog（A8.net）
   socialdog_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+FW5L4I+3VAG+5YRHE" rel="nofollow">SocialDog</a>
 <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4BGO4J+FW5L4I+3VAG+5YRHE" alt="">`,
+  aiarty: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+FXCGC2+428G+HVV0H" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=261118243963&wid=001&eno=01&mid=s00000018952003004000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4BGO4J+FXCGC2+428G+HVV0H" alt="">`, // Aiarty Image Enhancer（A8.net）
+  aiarty_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+FXCGC2+428G+HVFKY" rel="nofollow">【Aiarty Image Enhancer】</a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BGO4J+FXCGC2+428G+HVFKY" alt="">`,
   comu: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD78+G994FM+5YZG+5ZEMP" rel="nofollow">
 <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=261104084983&wid=001&eno=01&mid=s00000027862001005000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BGD78+G994FM+5YZG+5ZEMP" alt="">`, // Comu AIボイスレコーダー（A8.net）クーポン comu

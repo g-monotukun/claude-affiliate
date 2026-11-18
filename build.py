@@ -109,6 +109,11 @@ PRODUCTS = {
         tagline="X・Instagram・Threadsなど複数のSNSを、ひとつの画面でまとめて管理できる国産ツール",
         points=["無料のFreeプランでも、SNSごとに常に10件まで予約投稿できる", "フォロワーの増減や反応のないアカウントを一覧で管理", "有料プランは7日間の無料トライアルあり"],
         article="sns-management-tool"),
+    "aiarty": dict(
+        name="Aiarty Image Enhancer", color="violet", icon="sparkle", badge="AI画像高画質化",
+        tagline="ぼやけた写真や小さい画像を、AIで高画質化・拡大できるツール",
+        points=["ノイズ除去・ピンボケ補正・細部の補正に対応", "3つのAIモデルから選べて、明るさも自動で調整", "最大32倍まで拡大できるとされている"],
+        article="ai-image-enhancer"),
     "comu": dict(
         name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
         tagline="録音から文字起こし・要約まで。会議や商談の記録を仕事に活かすAIボイスレコーダー",
