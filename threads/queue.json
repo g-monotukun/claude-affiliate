@@ -1353,5 +1353,29 @@
     "text": "親に合う老人ホームを選びたいけど、何を基準に比べればいいか分からないよね\n資料請求は1つに絞らず、何か所かまとめて取るといいよ\n費用も雰囲気も、並べて見ないと違いが分からないんだよね",
     "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/nursing-home-search.html",
     "reply_text": "老人ホームの探し方はここにまとめてる"
+  },
+  {
+    "text": "年末に実家へ帰るたび、充電器とか薬とか、なにか忘れて困ってない？\n実家にない物から考えると、忘れ物はぐっと減るよ\nせっかく帰るなら、親のための足元灯や電池も一緒に持っていくと、ちょっとした親孝行になる",
+    "link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-packing-list.html",
+    "site": "親と実家の相談室",
+    "kind": "promo",
+    "season": [
+      11,
+      12,
+      1
+    ]
+  },
+  {
+    "text": "生成AIを仕事で使えるようになりたいけど、いきなり高い講座に申し込むのは怖いよね\n「DMM 生成AI CAMP 学び放題」は月額制で、入会金も最低契約期間もないから、まず1か月試して自分の仕事に使えるか確かめられる\n料金やコース、向いてる人をまとめたよ",
+    "link": "https://g-monotukun.github.io/claude-affiliate/articles/dmm-ai-camp.html",
+    "site": "AIツール比較ラボ",
+    "kind": "promo"
+  },
+  {
+    "kind": "tip",
+    "theme": "mens",
+    "text": "ヒゲ脱毛、早く終わらせたいからって間隔を詰めればいいわけじゃないんだよね\n毛には生え替わりの周期があって、脱毛が効きやすいのは伸びてる時期の毛だけ\nだから1〜2か月おきに通うのが目安って言われてる",
+    "reply_link": "https://g-monotukun.github.io/mens-care-lab/articles/beard-removal-timing.html",
+    "reply_text": "何ヶ月おきに通うのか、終わるまでの期間の考え方はこっち"
   }
 ]
