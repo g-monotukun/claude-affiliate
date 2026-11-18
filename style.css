@@ -197,7 +197,9 @@ img{max-width:100%;height:auto}
   .pc,.hero-cta{display:none}
   .points-grid{grid-template-columns:1fr;gap:12px}
   .brand-text small{display:none}
-  .gnav a{padding:6px 8px;font-size:.8rem}
+  .gnav a{padding:6px 8px;font-size:.8rem;white-space:nowrap}
+  .brand-text{font-size:.95rem}
+  .gnav{gap:0}
   .grid{grid-template-columns:1fr}
 }
 @media (max-width:520px){

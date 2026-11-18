@@ -1,4 +1,4 @@
-# AIツール比較ラボ
+# 仕事と副業のツール比較ラボ
 
 AIツール・業務効率化ツールの比較サイト（GitHub Pagesで公開する静的HTML）。
 
@@ -8,7 +8,7 @@ https://g-monotukun.github.io/claude-affiliate/
 ## A8.net サイト登録に入力する内容（例）
 | 項目 | 入力例 |
 |---|---|
-| サイト名 | AIツール比較ラボ |
+| サイト名 | 仕事と副業のツール比較ラボ |
 | URL | https://g-monotukun.github.io/claude-affiliate/ |
 | サイトの種類 | ブログ・Webサイト |
 | カテゴリ | インターネット・IT／ビジネス |

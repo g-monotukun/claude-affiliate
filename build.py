@@ -26,8 +26,8 @@ import re
 
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "src"
-SITE = "AIツール比較ラボ"
-TAGLINE = "AIツールを、目的から選ぶ。"
+SITE = "仕事と副業のツール比較ラボ"
+TAGLINE = "仕事と副業の道具を、目的から選ぶ。"
 BASE_URL = "https://g-monotukun.github.io/claude-affiliate/"
 # Google Search Console の所有権確認用
 # Google アナリティクス（GA4）の測定ID（例: "G-XXXXXXXXXX"）。空なら計測タグを入れない
@@ -43,7 +43,7 @@ def ga_tag():
 
 
 GSC_META = '\n<meta name="google-site-verification" content="g2Jn0JbKjPQR9hn0YPAHpSJyRZgExQNaeE51vIjmieE">'
-SITE_DESC = "AIツール・業務効率化ツールを目的別に比較し、選び方と使い方をやさしく解説するサイトです。"
+SITE_DESC = "AI・動画・画像・SNS・会計など、仕事や副業に使えるツールを目的別に比較し、選び方と使い方をやさしく解説するサイトです。"
 
 ICONS = {
     "school": '<path d="M3 9.5 12 5l9 4.5-9 4.5-9-4.5Z"/><path d="M7 11.5V16c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5v-4.5"/><path d="M21 9.5V15"/>',
@@ -256,12 +256,12 @@ def layout(title, description, body, p, is_home=False, path="", head=""):
 <body>
 <div class="prbar">本サイトはアフィリエイト広告（PR）を利用しています</div>
 <header class="site-header"><div class="wrap header-inner">
-<a class="brand" href="{p}index.html"><span class="logo">AI</span><span class="brand-text">{SITE}<small>{TAGLINE}</small></span></a>
+<a class="brand" href="{p}index.html"><span class="logo">道</span><span class="brand-text">{SITE}<small>{TAGLINE}</small></span></a>
 <nav class="gnav"><a href="{p}index.html#articles">記事一覧</a><a href="{p}about.html">運営者情報</a></nav>
 </div></header>
 {body}
 <footer class="site-footer"><div class="wrap">
-<div class="footer-brand"><span class="logo">AI</span><div><strong>{SITE}</strong><p>{SITE_DESC}</p></div></div>
+<div class="footer-brand"><span class="logo">道</span><div><strong>{SITE}</strong><p>{SITE_DESC}</p></div></div>
 <nav class="footer-nav"><a href="{p}index.html">トップ</a><a href="{p}about.html">運営者情報</a><a href="{p}privacy.html">プライバシーポリシー</a></nav>
 <p class="copy">&copy; 2026 {SITE}</p>
 </div></footer>
@@ -341,9 +341,9 @@ def build_article(a, articles):
 {body}
 </div>
 <aside class="author">
-<span class="logo big">AI</span>
+<span class="logo big">道</span>
 <div><p class="author-name">{SITE} 編集部</p>
-<p>AIツールや副業ツールを実際に試し、目的別の選び方をまとめています。記事はAIを活用して作成し、公開前に運営者が内容を確認しています。</p></div>
+<p>仕事や副業に使えるツールを調べ、目的別の選び方をまとめています。記事はAIを活用して作成し、公開前に運営者が内容を確認しています。</p></div>
 </aside>
 </main>
 <section class="related"><div class="wrap"><h2 class="section-title">あわせて読みたい</h2><div class="grid">{rel_html}</div></div></section>
@@ -370,9 +370,9 @@ def build_home(articles):
     cards = "".join(card(a, p) for a in articles)
     content = f"""<section class="hero"><div class="wrap hero-inner">
 <div class="hero-text">
-<p class="eyebrow">{icon('sparkle', 16)} AI時代の道具選びガイド</p>
-<h1>AIツールを、<br><span class="hl">目的から</span>選ぶ。</h1>
-<p class="lead">文章作成、画像生成、ブログ運営、AIの学び方まで。<br class="pc">増えすぎたツールの中から、あなたに合うものが見つかるように、選び方と確認ポイントをまとめています。</p>
+<p class="eyebrow">{icon('sparkle', 16)} 仕事と副業の道具選びガイド</p>
+<h1>仕事と副業の道具を、<br><span class="hl">目的から</span>選ぶ。</h1>
+<p class="lead">AIの活用、動画・画像・デザイン、SNS運用、ブログや確定申告まで。<br class="pc">増えすぎたツールの中から、あなたに合うものが見つかるように、選び方と確認ポイントをまとめています。</p>
 <div class="hero-cta"><a class="btn" href="#goals">目的から探す</a><a class="btn ghost" href="#picks">おすすめサービスを見る</a></div>
 </div>
 <div class="goal-panel" id="goals">
