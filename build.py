@@ -114,6 +114,11 @@ PRODUCTS = {
         tagline="ぼやけた写真や小さい画像を、AIで高画質化・拡大できるツール",
         points=["ノイズ除去・ピンボケ補正・細部の補正に対応", "3つのAIモデルから選べて、明るさも自動で調整", "最大32倍まで拡大できるとされている"],
         article="ai-image-enhancer"),
+    "clipstudio": dict(
+        name="CLIP STUDIO PAINT", color="coral", icon="pen", badge="お絵かきソフト",
+        tagline="イラスト・マンガ・Webtoon・アニメーションまで1本で制作できるお絵かきソフト",
+        points=["70,000点以上のブラシ素材が使える", "手ブレ補正やベクター線画で線をきれいに描ける", "コマ割り・フキダシ・トーンなどマンガ制作機能を標準搭載"],
+        article="digital-illustration-start"),
     "comu": dict(
         name="Comu", color="teal", icon="mic", badge="AIボイスレコーダー",
         tagline="録音から文字起こし・要約まで。会議や商談の記録を仕事に活かすAIボイスレコーダー",

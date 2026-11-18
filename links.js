@@ -64,6 +64,11 @@ const AFF_LINKS = {
 <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4BGO4J+FXCGC2+428G+HVV0H" alt="">`, // Aiarty Image Enhancer（A8.net）
   aiarty_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+FXCGC2+428G+HVFKY" rel="nofollow">【Aiarty Image Enhancer】</a>
 <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4BGO4J+FXCGC2+428G+HVFKY" alt="">`,
+  clipstudio: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+G1IHKI+3AP2+5ZU29" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=261118243970&wid=001&eno=01&mid=s00000015383001007000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BGO4J+G1IHKI+3AP2+5ZU29" alt="">`, // CLIP STUDIO PAINT（A8.net）
+  clipstudio_text: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+G1IHKI+3AP2+626XU" rel="nofollow">安心と信頼のお絵かきソフトはこれ【CLIP STUDIO PAINT】</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BGO4J+G1IHKI+3AP2+626XU" alt="">`,
   comu: `<a href="https://px.a8.net/svt/ejp?a8mat=4BGD78+G994FM+5YZG+5ZEMP" rel="nofollow">
 <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=261104084983&wid=001&eno=01&mid=s00000027862001005000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BGD78+G994FM+5YZG+5ZEMP" alt="">`, // Comu AIボイスレコーダー（A8.net）クーポン comu
