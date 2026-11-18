@@ -142,7 +142,7 @@ PRODUCTS = {
         name="DMM 生成AI CAMP 学び放題", color="coral", icon="school", badge="生成AI学習サブスク",
         tagline="職種別×ツール別のコースを、月額制で学び放題",
         points=["営業・マーケティング・人事など職種別のコース", "ChatGPT・Gemini・Claudeなどツール別にも学べる", "入会金・最低契約期間・追加料金なし"],
-        article="ai-school-checklist"),
+        article="dmm-ai-camp"),
 }
 
 
