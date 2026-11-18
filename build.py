@@ -263,12 +263,12 @@ def layout(title, description, body, p, is_home=False, path="", head=""):
 <body>
 <div class="prbar">本サイトはアフィリエイト広告（PR）を利用しています</div>
 <header class="site-header"><div class="wrap header-inner">
-<a class="brand" href="{p}index.html"><span class="logo">道</span><span class="brand-text">{SITE}<small>{TAGLINE}</small></span></a>
+<a class="brand" href="{p}index.html"><img class="logo" src="{p}icon.png?v={version('icon.png')}" alt="" width="36" height="36"><span class="brand-text">{SITE}<small>{TAGLINE}</small></span></a>
 <nav class="gnav"><a href="{p}index.html#articles">記事一覧</a><a href="{p}about.html">運営者情報</a></nav>
 </div></header>
 {body}
 <footer class="site-footer"><div class="wrap">
-<div class="footer-brand"><span class="logo">道</span><div><strong>{SITE}</strong><p>{SITE_DESC}</p></div></div>
+<div class="footer-brand"><img class="logo" src="{p}icon.png?v={version('icon.png')}" alt="" width="36" height="36"><div><strong>{SITE}</strong><p>{SITE_DESC}</p></div></div>
 <nav class="footer-nav"><a href="{p}index.html">トップ</a><a href="{p}about.html">運営者情報</a><a href="{p}privacy.html">プライバシーポリシー</a></nav>
 <p class="copy">&copy; 2026 {SITE}</p>
 </div></footer>
@@ -348,7 +348,7 @@ def build_article(a, articles):
 {body}
 </div>
 <aside class="author">
-<span class="logo big">道</span>
+<img class="logo big" src="{p}icon.png?v={version('icon.png')}" alt="" width="56" height="56">
 <div><p class="author-name">{SITE} 編集部</p>
 <p>仕事や副業に使えるツールを調べ、目的別の選び方をまとめています。記事はAIを活用して作成し、公開前に運営者が内容を確認しています。</p></div>
 </aside>
