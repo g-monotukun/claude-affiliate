@@ -220,7 +220,8 @@ def add_toc(body):
     if len(items) < 3:
         return body, ""
     lis = "".join(f'<li><a href="#s{i}">{t}</a></li>' for i, t in enumerate(items, 1))
-    return body, f'<nav class="toc" aria-label="目次"><p class="toc-title">目次</p><ol>{lis}</ol></nav>'
+    return body, (f'<details class="toc"><summary class="toc-title">目次（{len(items)}項目）</summary>'
+                  f'<ol>{lis}</ol></details>')
 
 
 def wrap_tables(body):
@@ -392,15 +393,15 @@ def build_home(articles):
 <div class="point">{icon('check', 22)}<div><strong>確認ポイントを明記</strong><p>契約前に見るべき条件をまとめています</p></div></div>
 <div class="point">{icon('check', 22)}<div><strong>実践の記録</strong><p>このサイト自体もAIで作っています</p></div></div>
 </div></section>
+<main class="wrap" id="articles">
+<h2 class="section-title">新着記事</h2>
+<div class="grid">{cards}</div>
+</main>
 <section class="wrap" id="picks">
 <h2 class="section-title">編集部おすすめのサービス</h2>
 <p class="section-lead">このサイトの運営や記事づくりの中で調べた、目的別のおすすめです。</p>
 <div class="products">{products}</div>
 </section>
-<main class="wrap" id="articles">
-<h2 class="section-title">新着記事</h2>
-<div class="grid">{cards}</div>
-</main>
 <section class="wrap"><div class="cta-band">
 <div><p class="cta-title">まずは「何をしたいか」から。</p><p>目的が決まれば、選ぶべきツールは自然に絞れます。</p></div>
 <a class="btn light" href="#goals">目的から探す</a>
