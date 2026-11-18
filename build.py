@@ -381,7 +381,7 @@ def build_home(articles):
 <p class="eyebrow">{icon('sparkle', 16)} 仕事と副業の道具選びガイド</p>
 <h1>仕事と副業の道具を、<br><span class="hl">目的から</span>選ぶ。</h1>
 <p class="lead">AIの活用、動画・画像・デザイン、SNS運用、ブログや確定申告まで。<br class="pc">増えすぎたツールの中から、あなたに合うものが見つかるように、選び方と確認ポイントをまとめています。</p>
-<div class="hero-cta"><a class="btn" href="#goals">目的から探す</a><a class="btn ghost" href="#picks">おすすめサービスを見る</a></div>
+<div class="hero-cta"><a class="btn" href="#goals">目的から探す</a><a class="btn ghost" href="#articles">記事を読む</a></div>
 </div>
 <div class="goal-panel" id="goals">
 <p class="goal-title">{icon('sparkle', 18)} あなたの目的は？</p>
@@ -398,8 +398,8 @@ def build_home(articles):
 <div class="grid">{cards}</div>
 </main>
 <section class="wrap" id="picks">
-<h2 class="section-title">編集部おすすめのサービス</h2>
-<p class="section-lead">このサイトの運営や記事づくりの中で調べた、目的別のおすすめです。</p>
+<h2 class="section-title">このサイトで紹介しているサービス</h2>
+<p class="section-lead">記事の内容に関連するサービスです。料金や条件は各公式サイトでご確認ください。</p>
 <div class="products">{products}</div>
 </section>
 <section class="wrap"><div class="cta-band">
