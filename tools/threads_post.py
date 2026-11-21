@@ -72,7 +72,7 @@ SITE_THEMES = {"claude-affiliate": "ai", "mens-care-lab": "mens", "parents-consu
 BRAND_WORDS = ["DMM", "MiriCanvas", "「ちかく」", "クオーレ", "七福神", "ぽいみつ", "ウリエル", "みんなのお焚き上げ",
                "freee", "マネーフォワード", "Comu", "Filmora", "FlexClip", "DomoAI", "JETBOY", "AiR-Wi-Fi",
                "エックスサーバー", "ConoHa", "お名前.com", "Value AI Writer", "湘南美容", "SBC", "ゴリラ",
-               "BIDAN", "銀座総合", "銀クリ", "文賢", "クオーレ", "SocialDog", "Aiarty", "CLIP STUDIO", "駅前AGA", "ライフリセット"]
+               "BIDAN", "銀座総合", "銀クリ", "文賢", "クオーレ", "SocialDog", "Aiarty", "CLIP STUDIO", "駅前AGA", "ライフリセット", "figo", "フィーゴ"]
 
 # 月ごとのテーマの重み（ai, mens, parents）
 THEME_WEIGHTS = {
