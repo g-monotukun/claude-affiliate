@@ -1,7 +1,7 @@
 {
-  "fetched_at": "2026-11-23T13:41:18.557739+09:00",
+  "fetched_at": "2026-11-23T18:15:09.957633+09:00",
   "account": {
-    "followers_count": 5
+    "followers_count": 6
   },
   "posts": [
     {
@@ -1089,7 +1089,7 @@
       "kind": "tip",
       "theme": "parents",
       "text": "親のことで心配はあるけど、誰に相談したらいいか分からないって人へ",
-      "views": 54,
+      "views": 55,
       "likes": 0,
       "replies": 1,
       "reposts": 0,
@@ -1141,9 +1141,9 @@
       "kind": "question",
       "theme": "ai",
       "text": "AIに毎月お金を払うのって、元が取れるか迷わない？",
-      "views": 18,
+      "views": 28,
       "likes": 1,
-      "replies": 2,
+      "replies": 6,
       "reposts": 0,
       "quotes": 0,
       "shares": 0
