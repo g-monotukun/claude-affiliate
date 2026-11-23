@@ -1224,7 +1224,10 @@
     "reply_link": "https://g-monotukun.github.io/parents-consultation/articles/homecoming-checklist.html",
     "reply_text": "帰省のときに見ておきたいことはこっちにまとめてる",
     "posted_at": "2026-11-22T22:49:37+0000",
-    "thread_id": "18183545665440705"
+    "thread_id": "18183545665440705",
+    "replied_at": [
+      "2026-11-23T03:17:40+0000"
+    ]
   },
   {
     "kind": "tip",
@@ -1262,7 +1265,9 @@
   {
     "kind": "question",
     "theme": "ai",
-    "text": "AIに毎月お金を払うのって、元が取れるか迷わない？\nChatGPTとかClaudeに課金してる人、どのタイミングで有料にしようって決めた？"
+    "text": "AIに毎月お金を払うのって、元が取れるか迷わない？\nChatGPTとかClaudeに課金してる人、どのタイミングで有料にしようって決めた？",
+    "posted_at": "2026-11-23T03:17:54+0000",
+    "thread_id": "17988452172104814"
   },
   {
     "kind": "question",
