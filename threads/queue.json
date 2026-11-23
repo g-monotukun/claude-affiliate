@@ -991,7 +991,7 @@
     "theme": "ai",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/online-video-editor.html",
     "reply_text": "AIで動画作るときの注意点はここにまとめてる",
-    "text": "AIで動画を作るのは楽しいけど、あとで揉めるのは絶対に避けたいよね\n一番気をつけたいのは、誰の顔で誰の声かってこと\n自分で用意した素材か、使っていい素材かを確認してからにしよう"
+    "text": "AIで動画を作るとき、あとで揉めないための一番かんたんなルール\n使うのは「自分で撮った写真」か「使っていいと書いてある素材」だけ\nこれだけ守っておけば、楽しく作れるよ"
   },
   {
     "site": "仕事と副業のツール比較ラボ",
@@ -1016,7 +1016,7 @@
     "theme": "ai",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-voice-recorder.html",
     "reply_text": "AIボイスレコーダーの選び方と録音のマナーはこっち",
-    "text": "AIの文字起こしで議事録が一瞬でできると楽だけど、間違いを出して恥をかくのは避けたいよね\n人の名前や会社名、数字は、聞き間違いで別の言葉になってることがある\n大事な記録ほど、最後は自分の目で確認しよう"
+    "text": "会議の議事録、AIの文字起こしに任せるだけでかなり楽になるんだけど\n名前と数字だけは最後に自分で見てほしい\n「田中」が「中田」になってるだけで、送ったあと冷や汗かくからね"
   },
   {
     "site": "メンズケア相談室",
@@ -1051,7 +1051,7 @@
   {
     "kind": "tip",
     "theme": "ai",
-    "text": "AIを使えば何でも作れそうな気がして、いきなり大きいものを作ろうとしてない？\n自分はClaude Codeでゲームを作ろうとして、最初から理想を詰め込みすぎて途中でやめたことがある\n今やるなら、まず1画面動かすところから始めると思う",
+    "text": "AIで何か作るなら、最初の目標は「小さく完成させる」でいいよ\n自分はClaude Codeでゲームを作ろうとして、理想を詰め込みすぎて途中でやめたことがある\n1画面だけでも動いたら、そこから足していけばいい",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/build-site-with-claude-code.html",
     "reply_text": "Claude Codeでサイト作ったときの流れはここにまとめてるよ"
   },
@@ -1072,14 +1072,14 @@
   {
     "kind": "tip",
     "theme": "ai",
-    "text": "生成AIで仕事を楽にしたいのに、触ってはみたけど何に使えばいいか分からないまま止まってない？\nツールの使い方より先に、自分の仕事のどの作業に使えるかを知ったほうが早いよ",
+    "text": "AIを触ってはみたけど、仕事で何に使えばいいか分からないなら\nまず「毎週やってる、ちょっと面倒な作業」を1つだけ任せてみて\nメールの下書きとか、会議メモの整理とか、それだけでも毎週の時間がちょっと浮くよ",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-school-checklist.html",
     "reply_text": "AIを学べるスクールを選ぶときに見ておきたいところ、まとめてます"
   },
   {
     "kind": "tip",
     "theme": "ai",
-    "text": "SNSの告知画像、本当はもっとちゃんと見せたいのに、毎回なんとなくで作ってない？\nテンプレートから作れるツールを使うだけで、迷ってる時間がかなり減るよ",
+    "text": "SNSの告知画像、毎回いちから作ってない？\nテンプレートを1つ決めて、文字と写真だけ差し替えるようにすると、作る時間がぐっと短くなるよ\n見た目もそろうから、ちゃんとしてる感じも出る",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
     "reply_text": "AIツール選ぶときに確認しておきたいことはこっち"
   },
@@ -1184,7 +1184,7 @@
   {
     "kind": "tip",
     "theme": "ai",
-    "text": "AIでスライドを作ったのに、会議で「で、結局何が言いたいの？」って言われたら悲しいよね\n見た目はAIがきれいにしてくれるけど、結論の1枚だけは自分で書いたほうがいい\nあと数字と会社名は、元の資料と照らし合わせてから出そう",
+    "text": "AIでスライドを作るなら、最後の1枚だけは自分で書くのがコツ\n「結局どうしてほしいのか」はAIには分からないからね\n見た目はAI、結論は自分、で分けると資料づくりがかなり早くなる",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-presentation.html",
     "reply_text": "AIでプレゼン資料作るときのコツと注意点はこっち"
   },
@@ -1320,21 +1320,21 @@
   {
     "kind": "tip",
     "theme": "ai",
-    "text": "AIに文章を頼んでも、なんか思ってたのと違うって感じることない？\n「誰に向けて」を一言足すだけで、返ってくる文章けっこう変わるよ\n例えば「60代の親に説明する感じで」とか",
+    "text": "AIに文章を頼むときは「誰に向けて」を一言足してみて\n「60代の親に説明する感じで」「新人に教える感じで」\nこれだけで、そのまま使える文章になる確率がぐっと上がるよ",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
     "reply_text": "AIで文章を作るときのコツと注意点はこっち"
   },
   {
     "kind": "tip",
     "theme": "ai",
-    "text": "AIで仕事を早く終わらせたいけど、情報漏れで怒られるのだけは避けたいよね\n会社の資料をそのまま貼る前に、名前とか金額とか、外に出しちゃいけない情報が入ってないか先に見ておこう",
+    "text": "AIで仕事を早く終わらせたいなら、最初にこれだけ決めておこう\n名前・金額・取引先は入れない\nこの3つを伏せてから貼るクセをつければ、情報漏れの心配はかなり減るよ",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
     "reply_text": "AIツールを選ぶときに確認したいことはここにまとめてる"
   },
   {
     "kind": "tip",
     "theme": "ai",
-    "text": "AIに長い文章を書かせたら、直すほうが大変だったってことない？\nいきなり全部じゃなくて「まず見出しだけ出して」って頼むと直しやすいよ\n骨組みを決めてから中身を書かせると、ずれが少ない",
+    "text": "AIに長い文章を書かせて、直すほうが大変だったことない？\n先に「見出しだけ出して」って頼んで、骨組みを直してから中身を書かせると、手戻りがほとんどなくなるよ",
     "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
     "reply_text": "AIで記事を書くときの注意点はこっち"
   },
@@ -1513,5 +1513,36 @@
     "link": "https://g-monotukun.github.io/mens-care-lab/articles/clinic-vs-salon.html",
     "site": "メンズケア相談室",
     "kind": "promo"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "親にスマホの使い方を説明するとき、AIに「70代の人に分かるように、3ステップで」って頼んでから送ると、伝わり方が全然ちがうよ\n専門用語が消えるだけで、何回も電話がかかってくるのが減る",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/ai-writing-tools.html",
+    "reply_text": "AIに文章を頼むときのコツはここにまとめてる"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "text": "仕事のメールの返信に迷ったら、AIに「丁寧に断る」「前向きに検討する」「質問で返す」の3パターンを出してもらうといいよ\n選んで少し直すだけだから、悩む時間がほぼなくなる",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
+    "reply_text": "AIツールを選ぶときに確認したいことはこっち"
+  },
+  {
+    "kind": "question",
+    "theme": "ai",
+    "text": "AIを使い始めてから、仕事で「これは楽になった」って思ったことある？\nまだ使ってない人は、何が一番面倒な作業？\n使い方のヒントになりそうなことを、次の投稿でまとめたいから教えてほしい"
+  },
+  {
+    "kind": "tip",
+    "theme": "ai",
+    "season": [
+      11,
+      12,
+      1
+    ],
+    "text": "年末にやることが多くて手が回らないなら、AIに「やることリストを、急ぎの順に並べて」って頼んでみて\n頭の中にあることを全部書き出して貼るだけで、何からやるか決まるから気持ちが楽になるよ",
+    "reply_link": "https://g-monotukun.github.io/claude-affiliate/articles/how-to-choose-ai-tools.html",
+    "reply_text": "AIツールの選び方と注意点はこっち"
   }
 ]
